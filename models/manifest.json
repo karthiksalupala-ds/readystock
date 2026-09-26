@@ -1088,6 +1088,42 @@
       "materials": [
         "furniture_texture"
       ]
+    },
+    {
+      "id": "cereal_shelf",
+      "category": "furniture",
+      "file": "store items/cereal_shelf.glb",
+      "description": "Detailed cereal and grocery stock shelf",
+      "triangles": 0,
+      "vertices": 0,
+      "bytes": 7668168,
+      "dimensions_m": {
+        "width": 0.24,
+        "height": 0.778313,
+        "depth": 0.400985
+      },
+      "origin": "model bounds centre",
+      "rigged": false,
+      "animations": [],
+      "materials": []
+    },
+    {
+      "id": "snack_shelf",
+      "category": "furniture",
+      "file": "store items/snack_shelf.glb",
+      "description": "Detailed stocked snack aisle shelf",
+      "triangles": 967372,
+      "vertices": 0,
+      "bytes": 56915072,
+      "dimensions_m": {
+        "width": 0.544768,
+        "height": 3.0,
+        "depth": 2.304786
+      },
+      "origin": "model bounds centre",
+      "rigged": false,
+      "animations": [],
+      "materials": []
     }
   ]
 }

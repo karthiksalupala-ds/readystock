@@ -170,7 +170,6 @@
       "type": "box",
       "label": "Rice Bag",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         -2.65,
         1.45,
@@ -186,11 +185,6 @@
         0,
         0
       ],
-=======
-      "position": [-2.65, 1.45, -2.065],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#ef4444",
@@ -202,7 +196,6 @@
       "type": "box",
       "label": "Rice Bag",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         -2.4,
         1.45,
@@ -218,11 +211,6 @@
         0,
         0
       ],
-=======
-      "position": [-2.4, 1.45, -2.065],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#ef4444",
@@ -234,7 +222,6 @@
       "type": "box",
       "label": "Rice Bag",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         -2.15,
         1.45,
@@ -250,11 +237,6 @@
         0,
         0
       ],
-=======
-      "position": [-2.15, 1.45, -2.065],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#ef4444",
@@ -266,7 +248,6 @@
       "type": "box",
       "label": "Oil Bottle",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         2.15,
         1.45,
@@ -282,11 +263,6 @@
         0,
         0
       ],
-=======
-      "position": [2.15, 1.45, -2.065],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#10b981",
@@ -298,7 +274,6 @@
       "type": "box",
       "label": "Oil Bottle",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         2.4,
         1.45,
@@ -314,11 +289,6 @@
         0,
         0
       ],
-=======
-      "position": [2.4, 1.45, -2.065],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#10b981",
@@ -330,7 +300,6 @@
       "type": "box",
       "label": "Oil Bottle",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         2.65,
         1.45,
@@ -346,11 +315,6 @@
         0,
         0
       ],
-=======
-      "position": [2.65, 1.45, -2.065],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#10b981",
@@ -362,7 +326,6 @@
       "type": "box",
       "label": "Dal Packet",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         -2.65,
         1.45,
@@ -378,11 +341,6 @@
         0,
         0
       ],
-=======
-      "position": [-2.65, 1.45, 0.335],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#f59e0b",
@@ -394,7 +352,6 @@
       "type": "box",
       "label": "Dal Packet",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         -2.4,
         1.45,
@@ -410,11 +367,6 @@
         0,
         0
       ],
-=======
-      "position": [-2.4, 1.45, 0.335],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#f59e0b",
@@ -426,7 +378,6 @@
       "type": "box",
       "label": "Dal Packet",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         -2.15,
         1.45,
@@ -442,11 +393,6 @@
         0,
         0
       ],
-=======
-      "position": [-2.15, 1.45, 0.335],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#f59e0b",
@@ -458,7 +404,6 @@
       "type": "box",
       "label": "Soap Pack",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         2.15,
         1.45,
@@ -474,11 +419,6 @@
         0,
         0
       ],
-=======
-      "position": [2.15, 1.45, 0.335],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#f59e0b",
@@ -490,7 +430,6 @@
       "type": "box",
       "label": "Soap Pack",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         2.4,
         1.45,
@@ -506,11 +445,6 @@
         0,
         0
       ],
-=======
-      "position": [2.4, 1.45, 0.335],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#f59e0b",
@@ -522,7 +456,6 @@
       "type": "box",
       "label": "Soap Pack",
       "category": "furniture",
-<<<<<<< HEAD
       "position": [
         2.65,
         1.45,
@@ -538,11 +471,6 @@
         0,
         0
       ],
-=======
-      "position": [2.65, 1.45, 0.335],
-      "size": [0.15, 0.2, 0.15],
-      "rotation": [0, 0, 0],
->>>>>>> e06f6e3 (feat: add shelf analysis and placement advice features)
       "material": null,
       "confidence": null,
       "color": "#f59e0b",
@@ -1198,6 +1126,34 @@
       "color": "#cbd5e1",
       "shape": null,
       "assetId": "pendant_cafe"
+    },
+    {
+      "id": "cereal-stock-display",
+      "type": "shelf",
+      "label": "Cereal and Grocery Shelf",
+      "category": "furniture",
+      "position": [-1.2, 1.25, 1.7],
+      "size": [1.05, 2.25, 0.72],
+      "rotation": [0, 0, 0],
+      "material": null,
+      "confidence": null,
+      "color": null,
+      "shape": null,
+      "assetId": "cereal_shelf"
+    },
+    {
+      "id": "snack-stock-display",
+      "type": "shelf",
+      "label": "Biscuits and Snacks Shelf",
+      "category": "furniture",
+      "position": [1.2, 1.25, 1.7],
+      "size": [1.05, 2.25, 0.72],
+      "rotation": [0, 0, 0],
+      "material": null,
+      "confidence": null,
+      "color": null,
+      "shape": null,
+      "assetId": "snack_shelf"
     }
   ]
 }

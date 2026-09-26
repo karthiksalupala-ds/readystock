@@ -26,7 +26,7 @@ start "InteLiDar Backend" /d "%~dp0" cmd.exe /k call "%~f0" backend
 start "InteLiDar Frontend" /d "%~dp0" cmd.exe /k call "%~f0" frontend
 
 echo Started backend and frontend in separate windows.
-echo Open http://127.0.0.1:5173/
+echo Open http://127.0.0.1:5176/
 goto :eof
 
 :backend
@@ -38,5 +38,5 @@ npm.cmd run backend
 goto :eof
 
 :frontend
-npm.cmd run dev -- --host 127.0.0.1
+npm.cmd run dev -- --host 127.0.0.1 --port 5176
 goto :eof

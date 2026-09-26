@@ -1,7 +1,7 @@
 import manifest from '../../models/manifest.json'
 import type { Vec3 } from './types'
 
-const files = import.meta.glob(['../../models/{furniture,plants,electronics}/*.glb', '!../../models/furniture/door_simple.glb'], { eager: true, query: '?url', import: 'default' }) as Record<string, string>
+const files = import.meta.glob('../../models/{furniture,plants,electronics,store items}/*.glb', { eager: true, query: '?url', import: 'default' }) as Record<string, string>
 const LABELS: Record<string, string> = {
   table_cafe: 'Café table', chair_cafe: 'Café chair', stool_bar: 'Bar stool',
   counter_cafe: 'Stone café bar', coffee_machine: 'Espresso machine',
@@ -17,6 +17,7 @@ const LABELS: Record<string, string> = {
   lamp_floor: 'Floor lamp', rug_simple: 'Rug', trash_bin: 'Waste bin',
   plant_potted_small: 'Small potted plant', plant_potted_medium: 'Medium potted plant', plant_indoor_tall: 'Tall indoor plant', pot_empty: 'Plant pot',
   tv_flat: 'Television', monitor_desktop: 'Desktop monitor', computer_desktop: 'Desktop computer', keyboard: 'Keyboard', laptop: 'Laptop',
+  door_simple: 'Shop door', cereal_shelf: 'Cereal stock shelf', snack_shelf: 'Snack stock shelf',
 }
 
 function typeFor(id: string) {

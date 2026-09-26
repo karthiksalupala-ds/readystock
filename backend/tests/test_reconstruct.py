@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from app.models import CaptureObject, IngestRequest, Room, SceneGraph, SceneObject
 from app.services.ingest import ingest_capture
@@ -25,6 +25,13 @@ def test_demo_contains_kirana_billing_and_shelf_racks() -> None:
     assert {"stool_round", "chair_cafe", "sofa_2seat"}.issubset({chair.asset_id for chair in chairs})
     shelves = [obj for obj in result.graph.objects if obj.asset_id == "shelf_rack_shop"]
     assert len(shelves) >= 4  # rice, oil, dal, soap, snacks
+
+
+def test_demo_includes_detailed_stock_shelves() -> None:
+    result = reconstruct_scene(ingest_capture(IngestRequest()))
+    by_id = {obj.id: obj for obj in result.graph.objects}
+    assert by_id["cereal-stock-display"].asset_id == "cereal_shelf"
+    assert by_id["snack-stock-display"].asset_id == "snack_shelf"
 
 
 def test_roomplan_reconstruction_preserves_device_labels_without_demo_id_lookup() -> None:

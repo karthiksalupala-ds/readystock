@@ -1,0 +1,2395 @@
+{
+  "generated_at": "2026-09-26T22:52:02.029870+00:00",
+  "root": "C:\\Users\\siddh\\readystock\\models\\store items",
+  "ok": false,
+  "asset_count": 3,
+  "total_triangles": 971716,
+  "total_file_bytes": 66853356,
+  "assets": [
+    {
+      "filename": "cereal_shelf.glb",
+      "path": "C:\\Users\\siddh\\readystock\\models\\store items\\cereal_shelf.glb",
+      "file_bytes": 7668168,
+      "failures": [
+        "scene root 'Sketchfab_model' has a nonidentity origin transform",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material5' primitive missing NORMAL",
+        "mesh 'Material5' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material5' primitive missing NORMAL",
+        "mesh 'Material5' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material5' primitive missing NORMAL",
+        "mesh 'Material5' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "dimensions are empty or implausible for an indoor asset in meters"
+      ],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "edge_color13778121255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_135",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_136",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color000255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_0",
+          "base_color": [
+            0.643137,
+            0.698039,
+            0.733333,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_133",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_135_1",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_134",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color202184110255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_122",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_122_2",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color206185151255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_120",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_120_3",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color187183174255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_125",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_125_4",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_115",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color127112134255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_121",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_121_5",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color196163149255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_119",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color225214181255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_124",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_124_6",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color173203199255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_123",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_123_7",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_116",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color255249249255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color204204204255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Snow",
+          "base_color": [
+            1.0,
+            0.976471,
+            0.976471,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color255255255255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_81",
+          "base_color": [
+            0.0941176,
+            0.0941176,
+            0.0941176,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_13",
+          "base_color": [
+            0.8,
+            0.8,
+            0.8,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_80",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_101",
+          "base_color": [
+            0.027451,
+            0.529412,
+            0.184314,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_A06",
+          "base_color": [
+            0.607843,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color154183189255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_126",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_126_8",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color225165165255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_118",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_118_9",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color201137162255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_127",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_127_10",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "edge_color17296111255",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_114",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_114_11",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 52,
+      "mesh_count": 52,
+      "node_count": 57,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 4332,
+      "vertices": 8918,
+      "primitive_count": 52,
+      "bounds_y_up": {
+        "min": [
+          -0.0,
+          0.0,
+          -40.098526
+        ],
+        "max": [
+          24.0,
+          77.831337,
+          2e-06
+        ],
+        "dimensions_m": [
+          24.0,
+          77.831337,
+          40.098528
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {
+        "author": "Pasha (https://sketchfab.com/perga8-hAwguf-hybwup)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/cereal-shelf-825430799fda4a88b4e88dc2c7f0b435",
+        "title": "cereal shelf"
+      },
+      "ok": false
+    },
+    {
+      "filename": "rice_bag_5kg.glb",
+      "path": "C:\\Users\\siddh\\readystock\\models\\store items\\rice_bag_5kg.glb",
+      "file_bytes": 2270116,
+      "failures": [
+        "scene root 'Sketchfab_model' has a nonidentity origin transform"
+      ],
+      "warnings": [
+        "lowest point is not within 3 mm of the floor (Y=0)"
+      ],
+      "materials": [
+        {
+          "name": "IMG_20170710_171511353",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IMG_20170710_171505896",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IMG_20170710_171500640",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IMG_20170710_171522544",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IMG_20170710_171455693",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IMG_20170710_171447261",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 6,
+      "mesh_count": 6,
+      "node_count": 13,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 12,
+      "vertices": 24,
+      "primitive_count": 6,
+      "bounds_y_up": {
+        "min": [
+          -0.234664,
+          -0.2,
+          -1.357537
+        ],
+        "max": [
+          3.665336,
+          6.1,
+          -0.357537
+        ],
+        "dimensions_m": [
+          3.9,
+          6.3,
+          1.0
+        ]
+      },
+      "origin": "see bounds",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {
+        "author": "Logansryche (https://sketchfab.com/Logansryche)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/rice-a-roni-long-grain-rice-box-9cb9dd17ae414017aa3401d8baf144ca",
+        "title": "Rice a Roni Long Grain Rice Box"
+      },
+      "ok": false
+    },
+    {
+      "filename": "snack_shelf.glb",
+      "path": "C:\\Users\\siddh\\readystock\\models\\store items\\snack_shelf.glb",
+      "file_bytes": 56915072,
+      "failures": [
+        "scene root 'Sketchfab_model' has a nonidentity origin transform",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0"
+      ],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "MediumBlue",
+          "base_color": [
+            0.16083986048138268,
+            0.16083986048138268,
+            0.8193024440314856,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_0",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_1",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_2",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_3",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_4",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_5",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_48",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Lay_s_20Potato_20Chips1",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_001",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "002_MediumVioletRed",
+          "base_color": [
+            0.780392,
+            0.0823529,
+            0.521569,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_46",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_E02",
+          "base_color": [
+            1.0,
+            0.803922,
+            0.152941,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_65",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_65_7",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material73",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_75",
+          "base_color": [
+            0.168628,
+            0.207843,
+            0.556863,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_34",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_34_8",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "020_Red",
+          "base_color": [
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_38",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_43",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "WarmGray8",
+          "base_color": [
+            0.380392,
+            0.333333,
+            0.298039,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Chipboard_1",
+          "base_color": [
+            0.662745,
+            0.6,
+            0.443137,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Burnt_Umber",
+          "base_color": [
+            0.305882,
+            0.121569,
+            0.117647,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Chipboard",
+          "base_color": [
+            0.54902,
+            0.494118,
+            0.364706,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Brown_1",
+          "base_color": [
+            0.615686,
+            0.454902,
+            0.282353,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "vs_snack_kacang_bandung_full02",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__56",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__58",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__40",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__42",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "sun_chips_2",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "046_Gold",
+          "base_color": [
+            1.0,
+            0.843137,
+            0.0,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "sun_chips_1",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "077_DarkGreen",
+          "base_color": [
+            0.0,
+            0.392157,
+            0.0,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_41",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_77",
+          "base_color": [
+            0.87451,
+            0.356863,
+            0.356863,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__50",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__51",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__54",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__55",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_40",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_39",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_39_9",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "0181004_180446",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "0181004_174555",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Incaparina",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Combos_Tuna",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Combos_Nacho_Cheese",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "tuete3_tex",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Tuete2_tex",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Tuete_tex1",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Combos_Fruit_Stripe_Gum",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Combos_Cheese_Bag_Scan_Back",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Combos_Liverwurst",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__64",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__60",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "xzela__61",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_47",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_41_1",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_45",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_I04",
+          "base_color": [
+            0.196078,
+            0.196078,
+            1.0,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_42",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Captura",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "material_33",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_2",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_10",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_11",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_12",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_12_10",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Material_13",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "102_RoyalBlue",
+          "base_color": [
+            0.254902,
+            0.411765,
+            0.882353,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_G08",
+          "base_color": [
+            0.317647,
+            0.8,
+            0.317647,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Sketchy_Shingles_Rustic",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "dark_sketch_stone_11",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "039_DarkOrange",
+          "base_color": [
+            1.0,
+            0.54902,
+            0.0,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "dark_sketch_stone",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Sketchy_Siding_Scale_13",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Sketchy_Siding_Scale",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Sketchy_Siding_Straight",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "099_LightSteelBlue",
+          "base_color": [
+            0.690196,
+            0.768628,
+            0.870588,
+            0.45098
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "BLEND",
+          "double_sided": false
+        },
+        {
+          "name": "PDM_SIGNATURE_36in_Base_Vanities_VERLYN_GRAY_WASH_Material_01",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "117_GhostWhite",
+          "base_color": [
+            0.972549,
+            0.972549,
+            1.0,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "PDM_SIGNATURE_36in_Base_Vanities_VERLYN_GRAY_WASH_Material_01_14",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Metal_Corrogated_Shiny",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Metal_Corrogated_Shiny1",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "130_Gainsboro",
+          "base_color": [
+            0.862745,
+            0.862745,
+            0.862745,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_A04_1",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_A04_1_15",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_007s",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_A02b",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_A04_1_16",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_001_3",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_001_3_17",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Merged_materials",
+          "base_color": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "Color_A02_12",
+          "base_color": [
+            1.0,
+            0.196078,
+            0.196078,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 98,
+      "mesh_count": 118,
+      "node_count": 242,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 967372,
+      "vertices": 1258991,
+      "primitive_count": 118,
+      "bounds_y_up": {
+        "min": [
+          -0.272384,
+          -0.0,
+          -1.152393
+        ],
+        "max": [
+          0.272384,
+          3.0,
+          1.152393
+        ],
+        "dimensions_m": [
+          0.544768,
+          3.0,
+          2.304786
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {
+        "author": "Pasha (https://sketchfab.com/perga8-hAwguf-hybwup)",
+        "license": "SKETCHFAB Standard (https://sketchfab.com/licenses)",
+        "source": "https://sketchfab.com/3d-models/snack-shelf-03c24c8e1cbf4cbfb9592afb45ce0be1",
+        "title": "Snack Shelf"
+      },
+      "ok": false
+    }
+  ],
+  "failures": [
+    {
+      "path": "C:\\Users\\siddh\\readystock\\models\\store items\\cereal_shelf.glb",
+      "failures": [
+        "scene root 'Sketchfab_model' has a nonidentity origin transform",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material5' primitive missing NORMAL",
+        "mesh 'Material5' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material5' primitive missing NORMAL",
+        "mesh 'Material5' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material5' primitive missing NORMAL",
+        "mesh 'Material5' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material4' primitive missing NORMAL",
+        "mesh 'Material4' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "mesh 'Material3' primitive missing NORMAL",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "primitive uses nontriangle topology",
+        "dimensions are empty or implausible for an indoor asset in meters"
+      ]
+    },
+    {
+      "path": "C:\\Users\\siddh\\readystock\\models\\store items\\rice_bag_5kg.glb",
+      "failures": [
+        "scene root 'Sketchfab_model' has a nonidentity origin transform"
+      ]
+    },
+    {
+      "path": "C:\\Users\\siddh\\readystock\\models\\store items\\snack_shelf.glb",
+      "failures": [
+        "scene root 'Sketchfab_model' has a nonidentity origin transform",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0",
+        "mesh 'Material2' primitive missing TEXCOORD_0",
+        "mesh 'Material3' primitive missing TEXCOORD_0"
+      ]
+    }
+  ]
+}
