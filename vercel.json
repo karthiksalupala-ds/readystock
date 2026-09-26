@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "backend/app/**",
+      "excludeFiles": "{{node_modules,dist,models,public,src,ios,docs,e2e,tests,scripts,test-results,*-report,playwright,backend/.venv,backend/tests,.git,.github,.cursor}/**,**/{__pycache__,.pytest_cache,*.egg-info}/**,.env*,backend/.env*}",
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/scene/:path*", "destination": "/api/index" },
+    { "source": "/health", "destination": "/api/index" }
+  ]
+}

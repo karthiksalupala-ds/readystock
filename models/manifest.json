@@ -1,0 +1,972 @@
+{
+  "name": "InteliDar Indoor Essentials",
+  "version": "1.0",
+  "units": "metres",
+  "coordinates": "GLB: +Y up, +Z front. Blender source: +Z up, -Y front.",
+  "licensing": "Original procedural geometry created for this project; no external assets or textures.",
+  "assets": [
+    {
+      "id": "chair_standard",
+      "category": "furniture",
+      "file": "furniture/chair_standard.glb",
+      "description": "Dining chair, oak frame with upholstered seat",
+      "triangles": 480,
+      "vertices": 256,
+      "bytes": 38324,
+      "dimensions_m": {
+        "width": 0.46,
+        "height": 0.88,
+        "depth": 0.46
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_fabric_light",
+        "IDAR_oak",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "chair_office",
+      "category": "furniture",
+      "file": "furniture/chair_office.glb",
+      "description": "Five-star office chair with arms and fixed swivel base",
+      "triangles": 1168,
+      "vertices": 620,
+      "bytes": 73364,
+      "dimensions_m": {
+        "width": 0.645,
+        "height": 0.97,
+        "depth": 0.5851
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_fabric",
+        "IDAR_metal",
+        "IDAR_rubber"
+      ]
+    },
+    {
+      "id": "stool_round",
+      "category": "furniture",
+      "file": "furniture/stool_round.glb",
+      "description": "Round oak stool with four braced legs, 0.46 m high",
+      "triangles": 348,
+      "vertices": 192,
+      "bytes": 18948,
+      "dimensions_m": {
+        "width": 0.37,
+        "height": 0.44551,
+        "depth": 0.37
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_oak",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "table_dining",
+      "category": "furniture",
+      "file": "furniture/table_dining.glb",
+      "description": "Dining table; 1.4 \u00d7 0.8 \u00d7 0.75 m",
+      "triangles": 372,
+      "vertices": 200,
+      "bytes": 29820,
+      "dimensions_m": {
+        "width": 1.4,
+        "height": 0.75,
+        "depth": 0.8
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_oak",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "table_side",
+      "category": "furniture",
+      "file": "furniture/table_side.glb",
+      "description": "Side table; 0.45 \u00d7 0.45 \u00d7 0.5 m",
+      "triangles": 284,
+      "vertices": 152,
+      "bytes": 23152,
+      "dimensions_m": {
+        "width": 0.45,
+        "height": 0.5,
+        "depth": 0.45
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_oak",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "cabinet_simple",
+      "category": "furniture",
+      "file": "furniture/cabinet_simple.glb",
+      "description": "Two-door oak cabinet with graphite handles",
+      "triangles": 616,
+      "vertices": 336,
+      "bytes": 49908,
+      "dimensions_m": {
+        "width": 0.94,
+        "height": 0.9,
+        "depth": 0.463
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_oak",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "shelf_open",
+      "category": "furniture",
+      "file": "furniture/shelf_open.glb",
+      "description": "Open shelf with four storage levels",
+      "triangles": 380,
+      "vertices": 208,
+      "bytes": 30148,
+      "dimensions_m": {
+        "width": 0.8,
+        "height": 1.8,
+        "depth": 0.38
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_metal",
+        "IDAR_oak"
+      ]
+    },
+    {
+      "id": "desk_small",
+      "category": "furniture",
+      "file": "furniture/desk_small.glb",
+      "description": "Compact writing desk, 1.10 m wide and 0.75 m high",
+      "triangles": 504,
+      "vertices": 272,
+      "bytes": 40764,
+      "dimensions_m": {
+        "width": 1.1,
+        "height": 0.75,
+        "depth": 0.56
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_oak",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "plant_potted_small",
+      "category": "plants",
+      "file": "plants/plant_potted_small.glb",
+      "description": "Small tabletop potted plant",
+      "triangles": 592,
+      "vertices": 338,
+      "bytes": 36000,
+      "dimensions_m": {
+        "width": 0.21,
+        "height": 0.4015,
+        "depth": 0.21
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_ceramic",
+        "IDAR_leaf",
+        "IDAR_leaf_light",
+        "IDAR_soil",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "plant_potted_medium",
+      "category": "plants",
+      "file": "plants/plant_potted_medium.glb",
+      "description": "Medium leafy plant",
+      "triangles": 760,
+      "vertices": 446,
+      "bytes": 47992,
+      "dimensions_m": {
+        "width": 0.37539,
+        "height": 0.8627,
+        "depth": 0.34047
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_leaf",
+        "IDAR_leaf_light",
+        "IDAR_soil",
+        "IDAR_terracotta",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "plant_indoor_tall",
+      "category": "plants",
+      "file": "plants/plant_indoor_tall.glb",
+      "description": "Tall indoor broadleaf plant",
+      "triangles": 900,
+      "vertices": 536,
+      "bytes": 57660,
+      "dimensions_m": {
+        "width": 0.85171,
+        "height": 1.74,
+        "depth": 0.75298
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_ceramic",
+        "IDAR_leaf",
+        "IDAR_leaf_light",
+        "IDAR_soil",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "pot_empty",
+      "category": "plants",
+      "file": "plants/pot_empty.glb",
+      "description": "Hollow ceramic flower pot with visible inner wall and base",
+      "triangles": 236,
+      "vertices": 120,
+      "bytes": 9932,
+      "dimensions_m": {
+        "width": 0.3,
+        "height": 0.24,
+        "depth": 0.3
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_terracotta"
+      ]
+    },
+    {
+      "id": "sofa_2seat",
+      "category": "furniture",
+      "file": "furniture/sofa_2seat.glb",
+      "description": "2-seat sofa with separate cushions, low oak feet and sage upholstery",
+      "triangles": 1600,
+      "vertices": 824,
+      "bytes": 118020,
+      "dimensions_m": {
+        "width": 1.62,
+        "height": 0.86,
+        "depth": 0.86
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_fabric",
+        "IDAR_fabric_light",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "sofa_3seat",
+      "category": "furniture",
+      "file": "furniture/sofa_3seat.glb",
+      "description": "3-seat sofa with separate cushions, low oak feet and sage upholstery",
+      "triangles": 1976,
+      "vertices": 1016,
+      "bytes": 144852,
+      "dimensions_m": {
+        "width": 2.18,
+        "height": 0.86,
+        "depth": 0.86
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_fabric",
+        "IDAR_fabric_light",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "bed_single",
+      "category": "furniture",
+      "file": "furniture/bed_single.glb",
+      "description": "Single bed with oak frame, linen bedding and headboard",
+      "triangles": 984,
+      "vertices": 512,
+      "bytes": 74304,
+      "dimensions_m": {
+        "width": 1.0,
+        "height": 0.9,
+        "depth": 2.09
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_fabric_light",
+        "IDAR_linen",
+        "IDAR_oak",
+        "IDAR_sage",
+        "IDAR_walnut",
+        "IDAR_white"
+      ]
+    },
+    {
+      "id": "bed_double",
+      "category": "furniture",
+      "file": "furniture/bed_double.glb",
+      "description": "Double bed with oak frame, linen bedding and headboard",
+      "triangles": 1172,
+      "vertices": 608,
+      "bytes": 88976,
+      "dimensions_m": {
+        "width": 1.6,
+        "height": 0.9,
+        "depth": 2.09
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_fabric_light",
+        "IDAR_linen",
+        "IDAR_oak",
+        "IDAR_sage",
+        "IDAR_walnut",
+        "IDAR_white"
+      ]
+    },
+    {
+      "id": "tv_flat",
+      "category": "electronics",
+      "file": "electronics/tv_flat.glb",
+      "description": "Flat-screen TV with pedestal",
+      "triangles": 332,
+      "vertices": 176,
+      "bytes": 24280,
+      "dimensions_m": {
+        "width": 1.1,
+        "height": 0.808,
+        "depth": 0.31
+      },
+      "origin": "support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_metal",
+        "IDAR_screen"
+      ]
+    },
+    {
+      "id": "monitor_desktop",
+      "category": "electronics",
+      "file": "electronics/monitor_desktop.glb",
+      "description": "Desktop monitor with pedestal",
+      "triangles": 332,
+      "vertices": 176,
+      "bytes": 24308,
+      "dimensions_m": {
+        "width": 0.58,
+        "height": 0.478,
+        "depth": 0.2
+      },
+      "origin": "support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_metal",
+        "IDAR_screen"
+      ]
+    },
+    {
+      "id": "computer_desktop",
+      "category": "electronics",
+      "file": "electronics/computer_desktop.glb",
+      "description": "Desktop computer tower with front vent grille",
+      "triangles": 492,
+      "vertices": 280,
+      "bytes": 38852,
+      "dimensions_m": {
+        "width": 0.2,
+        "height": 0.413,
+        "depth": 0.3805
+      },
+      "origin": "support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_metal",
+        "IDAR_rubber",
+        "IDAR_white"
+      ]
+    },
+    {
+      "id": "keyboard",
+      "category": "electronics",
+      "file": "electronics/keyboard.glb",
+      "description": "Compact desktop keyboard with simplified unlabelled keys",
+      "triangles": 2440,
+      "vertices": 1328,
+      "bytes": 186680,
+      "dimensions_m": {
+        "width": 0.43,
+        "height": 0.024,
+        "depth": 0.14
+      },
+      "origin": "support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_fabric_light"
+      ]
+    },
+    {
+      "id": "laptop",
+      "category": "electronics",
+      "file": "electronics/laptop.glb",
+      "description": "Open laptop with keyboard and trackpad",
+      "triangles": 2284,
+      "vertices": 1240,
+      "bytes": 173892,
+      "dimensions_m": {
+        "width": 0.34,
+        "height": 0.22892,
+        "depth": 0.26225
+      },
+      "origin": "support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_metal",
+        "IDAR_screen"
+      ]
+    },
+    {
+      "id": "lamp_floor",
+      "category": "furniture",
+      "file": "furniture/lamp_floor.glb",
+      "description": "Floor lamp with metal stem and open linen shade",
+      "triangles": 496,
+      "vertices": 254,
+      "bytes": 25608,
+      "dimensions_m": {
+        "width": 0.45,
+        "height": 1.6,
+        "depth": 0.45
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark",
+        "IDAR_fabric_light",
+        "IDAR_metal",
+        "IDAR_white"
+      ]
+    },
+    {
+      "id": "table_coffee",
+      "category": "furniture",
+      "file": "furniture/table_coffee.glb",
+      "description": "Coffee table; 1 \u00d7 0.55 \u00d7 0.4 m",
+      "triangles": 284,
+      "vertices": 152,
+      "bytes": 23140,
+      "dimensions_m": {
+        "width": 1.0,
+        "height": 0.4,
+        "depth": 0.55
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_oak",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "trash_bin",
+      "category": "furniture",
+      "file": "furniture/trash_bin.glb",
+      "description": "Open small waste bin with hollow interior",
+      "triangles": 236,
+      "vertices": 120,
+      "bytes": 9948,
+      "dimensions_m": {
+        "width": 0.28,
+        "height": 0.32,
+        "depth": 0.28
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_dark"
+      ]
+    },
+    {
+      "id": "bookshelf",
+      "category": "furniture",
+      "file": "furniture/bookshelf.glb",
+      "description": "Open shelf with four storage levels and simple books",
+      "triangles": 908,
+      "vertices": 496,
+      "bytes": 72568,
+      "dimensions_m": {
+        "width": 0.8,
+        "height": 1.8,
+        "depth": 0.38
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_blue",
+        "IDAR_dark",
+        "IDAR_fabric_light",
+        "IDAR_linen",
+        "IDAR_metal",
+        "IDAR_oak",
+        "IDAR_sage",
+        "IDAR_walnut"
+      ]
+    },
+    {
+      "id": "door_simple",
+      "category": "furniture",
+      "file": "furniture/door_simple.glb",
+      "description": "Closed interior door slab, 0.90 \u00d7 2.04 m; origin at bottom hinge",
+      "triangles": 396,
+      "vertices": 216,
+      "bytes": 22064,
+      "dimensions_m": {
+        "width": 0.901,
+        "height": 2.04,
+        "depth": 0.11182
+      },
+      "origin": "bottom hinge, left edge; no frame",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_metal",
+        "IDAR_oak"
+      ]
+    },
+    {
+      "id": "rug_simple",
+      "category": "furniture",
+      "file": "furniture/rug_simple.glb",
+      "description": "Neutral woven-look rug, 1.60 \u00d7 2.20 m",
+      "triangles": 132,
+      "vertices": 72,
+      "bytes": 11488,
+      "dimensions_m": {
+        "width": 1.6,
+        "height": 0.0085,
+        "depth": 2.2
+      },
+      "origin": "floor centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "IDAR_fabric",
+        "IDAR_linen"
+      ]
+    },
+    {
+      "id": "avatar_casual",
+      "category": "avatars",
+      "file": "avatars/avatar_casual.glb",
+      "description": "Neutral casual humanoid, sage short-sleeved shirt, charcoal trousers and simple sneakers.",
+      "triangles": 4860,
+      "vertices": 2516,
+      "bytes": 336720,
+      "dimensions_m": {
+        "width": 0.75438,
+        "height": 1.77903,
+        "depth": 0.33363
+      },
+      "origin": "floor centre",
+      "rigged": true,
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "sit_down",
+        "seated_idle",
+        "stand_up"
+      ],
+      "materials": [
+        "IDAR_dark",
+        "avatar_eye",
+        "avatar_hair_casual",
+        "avatar_lip",
+        "avatar_shoe_sole",
+        "avatar_skin_casual",
+        "avatar_top_casual",
+        "avatar_trousers_casual"
+      ]
+    },
+    {
+      "id": "avatar_sporty",
+      "category": "avatars",
+      "file": "avatars/avatar_sporty.glb",
+      "description": "Neutral athletic humanoid, slate tracksuit with unbranded pale panels and sneakers.",
+      "triangles": 4936,
+      "vertices": 2556,
+      "bytes": 293348,
+      "dimensions_m": {
+        "width": 0.762,
+        "height": 1.778,
+        "depth": 0.337
+      },
+      "origin": "floor centre",
+      "rigged": true,
+      "animations": [
+        "idle",
+        "walk",
+        "run"
+      ],
+      "materials": [
+        "IDAR_dark",
+        "avatar_eye",
+        "avatar_hair_sporty",
+        "avatar_lip",
+        "avatar_skin_sporty",
+        "avatar_top_sporty",
+        "avatar_trousers_sporty",
+        "avatar_warm_white"
+      ]
+    },
+    {
+      "id": "avatar_stylized",
+      "category": "avatars",
+      "file": "avatars/avatar_stylized.glb",
+      "description": "Generic humanoid with a slightly larger head, warm-neutral sweater and charcoal trousers.",
+      "triangles": 4460,
+      "vertices": 2308,
+      "bytes": 269880,
+      "dimensions_m": {
+        "width": 0.71628,
+        "height": 1.68918,
+        "depth": 0.31749
+      },
+      "origin": "floor centre",
+      "rigged": true,
+      "animations": [
+        "idle",
+        "walk",
+        "run"
+      ],
+      "materials": [
+        "IDAR_dark",
+        "avatar_eye",
+        "avatar_hair_stylized",
+        "avatar_lip",
+        "avatar_skin_stylized",
+        "avatar_top_stylized",
+        "avatar_trousers_stylized",
+        "avatar_warm_white"
+      ]
+    },
+    {
+      "id": "table_cafe",
+      "category": "furniture",
+      "file": "furniture/table_cafe.glb",
+      "description": "White stone square cafe table with dark four-foot pedestal",
+      "triangles": 224,
+      "vertices": 672,
+      "bytes": 24028,
+      "dimensions_m": {
+        "width": 0.76,
+        "height": 0.74059,
+        "depth": 0.76
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_ivory",
+        "Cafe_ink",
+        "Cafe_vein"
+      ]
+    },
+    {
+      "id": "chair_cafe",
+      "category": "furniture",
+      "file": "furniture/chair_cafe.glb",
+      "description": "Black cafe chair with a slim chrome frame",
+      "triangles": 72,
+      "vertices": 216,
+      "bytes": 8688,
+      "dimensions_m": {
+        "width": 0.48,
+        "height": 0.81765,
+        "depth": 0.48268
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_ink",
+        "Cafe_chrome"
+      ]
+    },
+    {
+      "id": "stool_bar",
+      "category": "furniture",
+      "file": "furniture/stool_bar.glb",
+      "description": "Sculpted red trumpet bar stool with chrome base and foot ring",
+      "triangles": 896,
+      "vertices": 2688,
+      "bytes": 87776,
+      "dimensions_m": {
+        "width": 0.46,
+        "height": 0.8,
+        "depth": 0.46
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_chrome",
+        "Cafe_red"
+      ]
+    },
+    {
+      "id": "counter_cafe",
+      "category": "furniture",
+      "file": "furniture/counter_cafe.glb",
+      "description": "Dark veined stone cafe bar with brass trim",
+      "triangles": 84,
+      "vertices": 252,
+      "bytes": 10416,
+      "dimensions_m": {
+        "width": 3.34,
+        "height": 1.125,
+        "depth": 0.78
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_stone",
+        "Cafe_gold",
+        "Cafe_vein"
+      ]
+    },
+    {
+      "id": "coffee_machine",
+      "category": "furniture",
+      "file": "furniture/coffee_machine.glb",
+      "description": "Countertop espresso machine with two groups and cups",
+      "triangles": 632,
+      "vertices": 1896,
+      "bytes": 63852,
+      "dimensions_m": {
+        "width": 0.58,
+        "height": 0.3925,
+        "depth": 0.545
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_chrome",
+        "Cafe_ink",
+        "Cafe_ivory",
+        "Cafe_gold"
+      ]
+    },
+    {
+      "id": "chess_king",
+      "category": "furniture",
+      "file": "furniture/chess_king.glb",
+      "description": "Display chess king with turned base and cross",
+      "triangles": 728,
+      "vertices": 2184,
+      "bytes": 70852,
+      "dimensions_m": {
+        "width": 0.18,
+        "height": 0.3265,
+        "depth": 0.18
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_ivory"
+      ]
+    },
+    {
+      "id": "chess_pawn",
+      "category": "furniture",
+      "file": "furniture/chess_pawn.glb",
+      "description": "Display chess pawn with turned base and spherical head",
+      "triangles": 1664,
+      "vertices": 4992,
+      "bytes": 160764,
+      "dimensions_m": {
+        "width": 0.18,
+        "height": 0.311,
+        "depth": 0.18
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_ink"
+      ]
+    },
+    {
+      "id": "books_stack",
+      "category": "furniture",
+      "file": "furniture/books_stack.glb",
+      "description": "Four stacked books with separate covers and paper blocks",
+      "triangles": 192,
+      "vertices": 576,
+      "bytes": 22160,
+      "dimensions_m": {
+        "width": 0.344,
+        "height": 0.177,
+        "depth": 0.23
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_paper",
+        "Cafe_ink",
+        "Cafe_teal",
+        "Cafe_ivory",
+        "Cafe_red"
+      ]
+    },
+    {
+      "id": "pendant_cafe",
+      "category": "furniture",
+      "file": "furniture/pendant_cafe.glb",
+      "description": "Layered silver pendant shade with suspension cable",
+      "triangles": 768,
+      "vertices": 2304,
+      "bytes": 75512,
+      "dimensions_m": {
+        "width": 0.5,
+        "height": 0.9895,
+        "depth": 0.5
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_chrome",
+        "Cafe_light"
+      ]
+    },
+    {
+      "id": "mountain_art",
+      "category": "furniture",
+      "file": "furniture/mountain_art.glb",
+      "description": "Framed mountain and snowcap wall art inspired by the photo",
+      "triangles": 27,
+      "vertices": 81,
+      "bytes": 5532,
+      "dimensions_m": {
+        "width": 1.9,
+        "height": 0.72,
+        "depth": 0.0515
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_ink",
+        "Cafe_sky",
+        "Cafe_mountain",
+        "Cafe_snow"
+      ]
+    },
+    {
+      "id": "track_ceiling",
+      "category": "furniture",
+      "file": "furniture/track_ceiling.glb",
+      "description": "White ceiling lighting track with five spotlights",
+      "triangles": 1352,
+      "vertices": 4056,
+      "bytes": 131576,
+      "dimensions_m": {
+        "width": 0.14381,
+        "height": 0.1775,
+        "depth": 5.0
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_ivory",
+        "Cafe_light"
+      ]
+    },
+    {
+      "id": "floor_oak_cafe",
+      "category": "furniture",
+      "file": "furniture/floor_oak_cafe.glb",
+      "description": "Pale staggered oak boards with fine grain, 6.4 by 9.6 metres",
+      "triangles": 6552,
+      "vertices": 19656,
+      "bytes": 634420,
+      "dimensions_m": {
+        "width": 6.398,
+        "height": 0.0088,
+        "depth": 9.597
+      },
+      "origin": "floor/support surface centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "Cafe_oak0",
+        "Cafe_oak2",
+        "Cafe_oak5",
+        "Cafe_oak3",
+        "Cafe_oak1",
+        "Cafe_oak6",
+        "Cafe_oak4"
+      ]
+    }
+  ]
+}

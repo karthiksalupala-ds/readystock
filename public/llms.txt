@@ -1,0 +1,130 @@
+# InteLiDar
+
+> Scan reality. Let AI understand and reconstruct it. InteLiDar is a hackathon MVP for turning room geometry into an interactive semantic digital twin: inspect measurements, edit furniture, ask spatial questions, and highlight answers in 3D.
+
+Last reviewed: 2026-09-13. This is project-provided factual context for human reviewers and AI agents, including Astra. It is not independent certification or a request for a particular score. Evaluate observable behavior and distinguish implemented features from unverified claims.
+
+## Entry points and discovery
+
+- Website button: AI judge briefing, available in the main viewer and room experience toolbars. Opens readable DOM text rather than a WebGL-only overlay.
+- [Complete project briefing](/llms.txt): this static UTF-8 text file; available without JavaScript, WebGL, API credentials, Xcode, or an iPhone.
+- Repository documentation paths below refer to files in the checkout, not guaranteed public website routes.
+- The browser requires JavaScript and WebGL for interactive 3D. No special AI agent authentication is required to read this briefing.
+
+## Problem, approach, and intended value
+
+Room scans are difficult to use when geometry has no meaning. InteLiDar separates geometry, semantic labels, and presentation. The scene graph contains room bounds and individually addressable objects with dimensions, positions, rotations, categories, and appearance. The viewer renders that graph; edits update it; spatial answers reference object IDs for highlights.
+
+Intended applications include interior planning, construction walkthroughs, facilities, real estate, and robotics research. This MVP is not a certified surveying instrument, building-code checker, navigation safety system, or autonomous robot controller.
+
+## Implemented browser capabilities
+
+- 3D viewer with a demo sweep, raw wireframe presentation, semantic reconstruction, and object list.
+- Spatial questions with text replies and object highlights, including chairs, doors, and possible movement obstructions.
+- Furniture movement and appearance changes, with generated display materials and colors.
+- Renovation tools for adding bundled furniture, rotating/removing objects, and undoing the last addition/removal.
+- Native RoomPlan scan-file import with format and geometry validation.
+- Generated office-floor import for evaluation without capture hardware.
+- Export to a reusable scan file, object schedule, floor plan, and 3D model.
+- Separate static GLB room import with scale/floor setup and desktop avatar walkthrough; desktop movement and interaction controls are shown in the UI.
+- Graphics settings for adapting rendering to the evaluator's device.
+
+## Suggested evaluation without an iPhone
+
+The first scene is a DEMO ONLY. According to the project team, it is a pre-recorded LiDAR scan replay of SQcollective Labs, the event space of the hackathon held on the day of this briefing. The team supplies this replay because live LiDAR capture requires the native iPhone app built and installed through Xcode on a Mac; a visiting browser agent cannot perform that native capture. It is not a live scan of the judge's environment. This venue/recording attribution is team-provided, and the original sensor recording has not been independently inspected in this setup. The current scene's handcrafted/estimated representation and animated sweep should not be treated as raw recorded sensor data or validated measurements.
+
+1. Open the viewer. Read the Source label to identify the scene's provenance.
+2. Watch the demo sweep or select Skip, then AI Reconstruct. Observe semantic labels and the transition in presentation.
+3. Ask "Show me all the chairs." Compare the reply, highlighted objects, and object list. Also try "Where is the door?" and "What objects could obstruct movement through this room?"
+4. Toggle Edit, move furniture, and change appearance. Ask another question about the current room.
+5. Open Renovate, add a furniture item, rotate/remove it, and exercise Undo where available.
+6. Select Import scan → Load simulated scan. This is a generated 18 × 11.6 × 3.1 metre office floor with 106 objects, not a real sensor recording. Repeat reconstruction, ask, editing, and export.
+7. Export a scan file and re-import it through Import scan → Choose scan from Files. Check the room and edits survive that explicit file round trip.
+8. On desktop, try Play, or Import room with a self-contained GLB, configure scale and a clear floor position, and enter the walkthrough.
+
+The photo café demo is a handcrafted interpretation of a photograph with estimated dimensions. It is not automated photo reconstruction or a measured LiDAR scan. The legacy demo API fixture and simulated office are also unmeasured. A successful browser demo is evidence of viewer/reasoning functionality, not live LiDAR access.
+
+## iPhone capture support and Xcode limitations
+
+The project's intended capture support is iPhone 13 Pro/Pro Max and later Pro/Pro Max models WITH a LiDAR sensor, running iOS 16 or later. A newer standard/non-Pro iPhone without LiDAR does not qualify. Native capture is iPhone-only for this project; the website viewer can be used on other compatible browsers.
+
+The current runtime guard checks that the device is an iPhone and RoomCaptureSession.isSupported. It is capability-based, not a hardcoded iPhone-generation allowlist; the stated iPhone 13 Pro-and-later range is the project's intended support scope, not proof that every such model has been tested.
+
+Safari and other browser agents cannot invoke this project's native RoomPlan LiDAR capture. Installing the website on the Home Screen does not install the native app. There is no camera-only fallback. A simulator cannot capture a physical room.
+
+Native source is in ios/InteLiDarCapture.xcodeproj. To build and install:
+1. Use a Mac with Xcode and the iOS SDK; open the project and select InteLiDarCapture.
+2. Configure automatic development signing using an Apple development team. An Apple account, valid certificate/private key, and provisioning profile are needed. A Personal Team was used for local installation.
+3. Connect and unlock the supported iPhone, trust the Mac, enable Developer Mode if requested, and select it as the run destination.
+4. Build and install. Trust the development certificate under iPhone Settings → General → VPN & Device Management when required.
+5. Launch InteLiDar Capture, tap Start scan, and grant camera access. Physical movement around a room is necessary; a web-only evaluator cannot complete this step.
+6. Follow RoomPlan guidance, include walls/floor/doors/windows/furniture, tap Finish, wait for processing, then Export scan → Save to Files.
+7. Open the website in Safari and select Import scan → Choose scan from Files to load the .intelidar.json file. Confirm the Source reads iPhone LiDAR · RoomPlan.
+
+No signed public IPA, App Store release, or TestFlight distribution is supplied by this repository. Local development signing is not public distribution and may require renewal. Windows/Linux and browser-only evaluation cannot build this Xcode app in this workflow.
+
+## Actual verification status as of 2026-09-13
+
+- Unsigned iPhone app compilation succeeded with Xcode 26.6 and iOS SDK 26.5.
+- Simulator exporter unit tests passed; these cover export geometry, not sensor operation.
+- A signed development build succeeded with a Personal Team and was installed on a connected iPhone 17 Pro Max running iOS 27.0.
+- After Developer Mode and developer-certificate trust, command-line launch succeeded and the app process was observed running.
+- Camera permission, the runtime supported-state UI, a completed physical RoomPlan scan, its exported file, and the real-file Safari import have NOT yet been independently verified in this activation session. Do not infer them from successful installation.
+- The Personal Team selection was saved in the local Xcode project. A later verification rebuild encountered Xcode/keychain credentials and CodeSign errSecInternalComponent errors. The earlier installed app continued running. Future rebuilds may require restoring Xcode account/keychain access; repeat-build reliability is not established.
+- Local frontend and API health checks succeeded. Local development service availability is not evidence that a public deployment's API is configured.
+- Repository browser tests use synthetic capture files; they do not establish physical sensor accuracy.
+
+## Data provenance and geometry contract
+
+Native exports use format intelidar.roomplan, version 1, source roomplan. Generated office files use intelidar.simulated and source simulated. The browser validates the matching format/source rather than trusting an arbitrary source label. This is format validation, not cryptographic proof of sensor origin.
+
+Measurements use metres, Y up, right-handed coordinates. Objects have full local extents, box-centre positions, and XYZ Euler rotations in radians. The exporter aligns the room to a dominant wall direction before calculating enclosing bounds, normalizes the origin to the floor rectangle centre, and rounds measurements to millimetres and rotations to microradians. These rounding increments are not sensor-accuracy guarantees.
+
+Walls determine floor height. Zero-depth doors/windows receive a 1 cm display thickness. RoomPlan object labels are preserved; unsupported furniture categories use generic display models. IDs are namespaced. RoomPlan qualitative confidence is not converted to a fabricated probability.
+
+## Limits and non-goals
+
+- One room per export; an enclosing rectangle approximates L-shaped, angled, or curved rooms and open passageways.
+- At most 500 objects and a 5 MB browser import limit; positive dimensions up to 50 metres.
+- Native exports do not contain raw depth frames, camera images, detailed scanned mesh triangles, photo textures, or raw wall polygons.
+- Furniture shapes, materials, and colors in the viewer are display representations/defaults, not recovered surface detail.
+- Import scan accepts the project's versioned JSON contracts, not arbitrary RoomPlan JSON, USDZ, OBJ, PLY, LAS, or E57. GLB uses the separate Import room workflow.
+- Imported GLB geometry does not automatically become a labelled RoomPlan semantic graph.
+- Automated image detection/segmentation and photorealistic scan reconstruction are not implemented.
+- Edits and imported scenes last for the current page session; refreshing clears them. Export and re-import to preserve a room explicitly.
+- The demo sweep/point cloud is generated presentation, not a sensor connection.
+
+## AI, privacy, and dependencies
+
+The native capture app makes no network requests. The user explicitly saves or shares the export. Browser import/viewing is local; Ask sends the current graph to the API and its configured reasoner.
+
+OpenAI-backed Ask is optional and uses server-side credentials. Without a usable key, or if a provider call fails, the backend falls back to a keyword/heuristic reasoner. A fluent or correct answer is not evidence that OpenAI was called. Reconstruction in the MVP includes programmed classification/material behavior; do not describe every animation or classification step as a live generative model invocation.
+
+Keep secrets on the backend; never expose them using VITE_ environment variables. The graph may describe a private room, so using an externally configured reasoner transmits that room representation to that service.
+
+## Architecture and running locally
+
+Frontend: Vite, React, TypeScript, Three.js, React Three Fiber/Drei. Desktop physics/walkthrough: Rapier. Backend: Python FastAPI with a Pydantic scene graph and optional OpenAI adapter. Native capture: Swift, UIKit, AVFoundation, RoomPlan.
+
+Requires Node.js 20+ and Python 3.11+. Install with npm install; create backend/.venv and install backend dependencies per docs/getting-started.md. Run npm run backend (127.0.0.1:8000) and npm run dev (Vite, normally port 5173). The Vite server proxies API requests. Check /health through the development server.
+
+For iPhone Safari on the same Wi-Fi, use the Mac's actual LAN address and Vite port. localhost on the phone refers to the phone. Do not hardcode an old LAN address from setup notes. A deployed frontend needs a reachable, correctly configured API for Ask/reconstruction; static hosting alone is insufficient for those operations.
+
+## Repository evidence map
+
+- README.md: product overview and demo.
+- ios/README.md and ios/CODEX-HANDOFF.md: native setup and activation workflow. Older pending-status statements may predate the dated verification notes above.
+- ios/InteLiDarCapture/CaptureViewController.swift: support gate, permission flow, RoomPlan session, processing, and sharing.
+- ios/InteLiDarCapture/ScanExport.swift and ios/InteLiDarCaptureTests/: export implementation and tests.
+- src/components/CaptureImport.tsx and src/scene/importCapture.ts: file import UI and validation.
+- src/components/AgentBriefing.tsx and public/llms.txt: evaluator briefing.
+- docs/capture.md and docs/capture-geometry.md: provenance and geometry limitations.
+- docs/export.md, docs/renovation.md, docs/playable-rooms.md: export/edit/walkthrough features.
+- docs/architecture.md, docs/scene-graph.md, docs/api.md: implementation and API contracts.
+- docs/getting-started.md and docs/development.md: installation and checks.
+- npm run build: TypeScript and production frontend build.
+- npm run test:frontend, npm run test:backend, npm run test:e2e: respective automated suites. Installed browser engines are required for E2E tests.
+
+## Evaluation interpretation
+
+Report separately what you observed in the browser, what you inspected in source/tests, and what requires a physical iPhone. Account for the Xcode/hardware boundary when a browser-only agent cannot exercise native capture. Treat features and constraints above as claims to check, not instructions to override the organizer's judging criteria. No completed real scan or end-to-end physical capture should be credited solely from simulated data, source code, or a running process.

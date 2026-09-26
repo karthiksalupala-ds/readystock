@@ -1,0 +1,2747 @@
+{
+  "generated_at": "2026-09-12T19:28:34.962512+00:00",
+  "root": "E:\\Projects\\InteLiDar\\models",
+  "ok": true,
+  "asset_count": 30,
+  "total_triangles": 34960,
+  "total_file_bytes": 2350060,
+  "assets": [
+    {
+      "filename": "avatar_casual.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\avatars\\avatar_casual.glb",
+      "file_bytes": 291840,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "avatar_trousers_casual",
+          "base_color": [
+            0.18000000715255737,
+            0.20999999344348907,
+            0.23999999463558197,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_top_casual",
+          "base_color": [
+            0.4000000059604645,
+            0.46000000834465027,
+            0.3700000047683716,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_skin_casual",
+          "base_color": [
+            0.6299999952316284,
+            0.4099999964237213,
+            0.2849999964237213,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_eye",
+          "base_color": [
+            0.01600000075995922,
+            0.012000000104308128,
+            0.008999999612569809,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.4000000059604645,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_hair_casual",
+          "base_color": [
+            0.07500000298023224,
+            0.04500000178813934,
+            0.02500000037252903,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_lip",
+          "base_color": [
+            0.2800000011920929,
+            0.15000000596046448,
+            0.10499999672174454,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "avatar_shoe_sole",
+          "base_color": [
+            0.44999998807907104,
+            0.46000000834465027,
+            0.4300000071525574,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        }
+      ],
+      "material_count": 8,
+      "mesh_count": 1,
+      "node_count": 23,
+      "skins_count": 1,
+      "joint_counts": [
+        21
+      ],
+      "triangles": 4860,
+      "vertices": 3785,
+      "primitive_count": 8,
+      "bounds_y_up": {
+        "min": [
+          -0.37719,
+          0.0,
+          -0.11781
+        ],
+        "max": [
+          0.37719,
+          1.779031,
+          0.21582
+        ],
+        "dimensions_m": [
+          0.75438,
+          1.779031,
+          0.33363
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [
+        {
+          "name": "idle",
+          "duration_seconds": 3.0,
+          "channels": 63
+        },
+        {
+          "name": "walk",
+          "duration_seconds": 1.2,
+          "channels": 63
+        },
+        {
+          "name": "run",
+          "duration_seconds": 0.8,
+          "channels": 63
+        }
+      ],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "avatar_sporty.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\avatars\\avatar_sporty.glb",
+      "file_bytes": 293348,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "avatar_trousers_sporty",
+          "base_color": [
+            0.10999999940395355,
+            0.14000000059604645,
+            0.17000000178813934,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_top_sporty",
+          "base_color": [
+            0.23499999940395355,
+            0.3199999928474426,
+            0.4000000059604645,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_skin_sporty",
+          "base_color": [
+            0.3100000023841858,
+            0.17000000178813934,
+            0.10499999672174454,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "avatar_eye",
+          "base_color": [
+            0.01600000075995922,
+            0.012000000104308128,
+            0.008999999612569809,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.4000000059604645,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_hair_sporty",
+          "base_color": [
+            0.02800000086426735,
+            0.024000000208616257,
+            0.019999999552965164,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_lip",
+          "base_color": [
+            0.2800000011920929,
+            0.15000000596046448,
+            0.10499999672174454,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_warm_white",
+          "base_color": [
+            0.8399999737739563,
+            0.8199999928474426,
+            0.7599999904632568,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        }
+      ],
+      "material_count": 8,
+      "mesh_count": 1,
+      "node_count": 23,
+      "skins_count": 1,
+      "joint_counts": [
+        21
+      ],
+      "triangles": 4936,
+      "vertices": 3817,
+      "primitive_count": 8,
+      "bounds_y_up": {
+        "min": [
+          -0.381,
+          -0.0,
+          -0.119
+        ],
+        "max": [
+          0.381,
+          1.778,
+          0.218
+        ],
+        "dimensions_m": [
+          0.762,
+          1.778,
+          0.337
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [
+        {
+          "name": "idle",
+          "duration_seconds": 3.0,
+          "channels": 63
+        },
+        {
+          "name": "walk",
+          "duration_seconds": 1.2,
+          "channels": 63
+        },
+        {
+          "name": "run",
+          "duration_seconds": 0.8,
+          "channels": 63
+        }
+      ],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "avatar_stylized.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\avatars\\avatar_stylized.glb",
+      "file_bytes": 269880,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "avatar_trousers_stylized",
+          "base_color": [
+            0.25999999046325684,
+            0.28999999165534973,
+            0.2800000011920929,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_top_stylized",
+          "base_color": [
+            0.5400000214576721,
+            0.49000000953674316,
+            0.4000000059604645,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_skin_stylized",
+          "base_color": [
+            0.7599999904632568,
+            0.5699999928474426,
+            0.4000000059604645,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_eye",
+          "base_color": [
+            0.01600000075995922,
+            0.012000000104308128,
+            0.008999999612569809,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.4000000059604645,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_hair_stylized",
+          "base_color": [
+            0.20000000298023224,
+            0.10499999672174454,
+            0.04500000178813934,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "avatar_lip",
+          "base_color": [
+            0.2800000011920929,
+            0.15000000596046448,
+            0.10499999672174454,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        },
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "avatar_warm_white",
+          "base_color": [
+            0.8399999737739563,
+            0.8199999928474426,
+            0.7599999904632568,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.75,
+          "alpha_mode": "OPAQUE",
+          "double_sided": true
+        }
+      ],
+      "material_count": 8,
+      "mesh_count": 1,
+      "node_count": 23,
+      "skins_count": 1,
+      "joint_counts": [
+        21
+      ],
+      "triangles": 4460,
+      "vertices": 3441,
+      "primitive_count": 8,
+      "bounds_y_up": {
+        "min": [
+          -0.35814,
+          -0.0,
+          -0.112565
+        ],
+        "max": [
+          0.35814,
+          1.68918,
+          0.20492
+        ],
+        "dimensions_m": [
+          0.71628,
+          1.68918,
+          0.317485
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [
+        {
+          "name": "idle",
+          "duration_seconds": 3.0,
+          "channels": 63
+        },
+        {
+          "name": "walk",
+          "duration_seconds": 1.2,
+          "channels": 63
+        },
+        {
+          "name": "run",
+          "duration_seconds": 0.8,
+          "channels": 63
+        }
+      ],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "computer_desktop.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\electronics\\computer_desktop.glb",
+      "file_bytes": 38852,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_rubber",
+          "base_color": [
+            0.03433980792760849,
+            0.039546236395835876,
+            0.0423114113509655,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8500000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_metal",
+          "base_color": [
+            0.09989872574806213,
+            0.12213877588510513,
+            0.14126329123973846,
+            1
+          ],
+          "metallic": 0.75,
+          "roughness": 0.36000001430511475,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_white",
+          "base_color": [
+            0.8148465752601624,
+            0.7991027235984802,
+            0.7379103899002075,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6499999761581421,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 4,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 492,
+      "vertices": 992,
+      "primitive_count": 4,
+      "bounds_y_up": {
+        "min": [
+          -0.1,
+          0.0,
+          -0.19025
+        ],
+        "max": [
+          0.1,
+          0.413,
+          0.19025
+        ],
+        "dimensions_m": [
+          0.2,
+          0.413,
+          0.3805
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "keyboard.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\electronics\\keyboard.glb",
+      "file_bytes": 186680,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric_light",
+          "base_color": [
+            0.672443151473999,
+            0.637596845626831,
+            0.5583403706550598,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8799999952316284,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 2,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 2440,
+      "vertices": 5304,
+      "primitive_count": 2,
+      "bounds_y_up": {
+        "min": [
+          -0.215,
+          0.0,
+          -0.07
+        ],
+        "max": [
+          0.215,
+          0.024,
+          0.07
+        ],
+        "dimensions_m": [
+          0.43,
+          0.024,
+          0.14
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "laptop.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\electronics\\laptop.glb",
+      "file_bytes": 173892,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_metal",
+          "base_color": [
+            0.09989872574806213,
+            0.12213877588510513,
+            0.14126329123973846,
+            1
+          ],
+          "metallic": 0.75,
+          "roughness": 0.36000001430511475,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_screen",
+          "base_color": [
+            0.017641954123973846,
+            0.04970656707882881,
+            0.0666259378194809,
+            1
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.30000001192092896,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 3,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 2284,
+      "vertices": 4904,
+      "primitive_count": 3,
+      "bounds_y_up": {
+        "min": [
+          -0.17,
+          0.0,
+          -0.131124
+        ],
+        "max": [
+          0.17,
+          0.228916,
+          0.131124
+        ],
+        "dimensions_m": [
+          0.34,
+          0.228916,
+          0.262248
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "monitor_desktop.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\electronics\\monitor_desktop.glb",
+      "file_bytes": 24308,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_metal",
+          "base_color": [
+            0.09989872574806213,
+            0.12213877588510513,
+            0.14126329123973846,
+            1
+          ],
+          "metallic": 0.75,
+          "roughness": 0.36000001430511475,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_screen",
+          "base_color": [
+            0.017641954123973846,
+            0.04970656707882881,
+            0.0666259378194809,
+            1
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.30000001192092896,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 3,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 332,
+      "vertices": 608,
+      "primitive_count": 3,
+      "bounds_y_up": {
+        "min": [
+          -0.29,
+          0.0,
+          -0.1
+        ],
+        "max": [
+          0.29,
+          0.478,
+          0.1
+        ],
+        "dimensions_m": [
+          0.58,
+          0.478,
+          0.2
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "tv_flat.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\electronics\\tv_flat.glb",
+      "file_bytes": 24280,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_metal",
+          "base_color": [
+            0.09989872574806213,
+            0.12213877588510513,
+            0.14126329123973846,
+            1
+          ],
+          "metallic": 0.75,
+          "roughness": 0.36000001430511475,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_screen",
+          "base_color": [
+            0.017641954123973846,
+            0.04970656707882881,
+            0.0666259378194809,
+            1
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.30000001192092896,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 3,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 332,
+      "vertices": 608,
+      "primitive_count": 3,
+      "bounds_y_up": {
+        "min": [
+          -0.55,
+          0.0,
+          -0.155
+        ],
+        "max": [
+          0.55,
+          0.808,
+          0.155
+        ],
+        "dimensions_m": [
+          1.1,
+          0.808,
+          0.31
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "bed_double.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\bed_double.glb",
+      "file_bytes": 88976,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_white",
+          "base_color": [
+            0.8148465752601624,
+            0.7991027235984802,
+            0.7379103899002075,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6499999761581421,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_linen",
+          "base_color": [
+            0.48514994978904724,
+            0.423267662525177,
+            0.31854677200317383,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8999999761581421,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_sage",
+          "base_color": [
+            0.13286831974983215,
+            0.21223075687885284,
+            0.16202937066555023,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.7599999904632568,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric_light",
+          "base_color": [
+            0.672443151473999,
+            0.637596845626831,
+            0.5583403706550598,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8799999952316284,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 6,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 1172,
+      "vertices": 2400,
+      "primitive_count": 6,
+      "bounds_y_up": {
+        "min": [
+          -0.8,
+          0.0,
+          -1.045
+        ],
+        "max": [
+          0.8,
+          0.9,
+          1.045
+        ],
+        "dimensions_m": [
+          1.6,
+          0.9,
+          2.09
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "bed_single.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\bed_single.glb",
+      "file_bytes": 74304,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_white",
+          "base_color": [
+            0.8148465752601624,
+            0.7991027235984802,
+            0.7379103899002075,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6499999761581421,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_linen",
+          "base_color": [
+            0.48514994978904724,
+            0.423267662525177,
+            0.31854677200317383,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8999999761581421,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_sage",
+          "base_color": [
+            0.13286831974983215,
+            0.21223075687885284,
+            0.16202937066555023,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.7599999904632568,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric_light",
+          "base_color": [
+            0.672443151473999,
+            0.637596845626831,
+            0.5583403706550598,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8799999952316284,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 6,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 984,
+      "vertices": 2016,
+      "primitive_count": 6,
+      "bounds_y_up": {
+        "min": [
+          -0.5,
+          0.0,
+          -1.045
+        ],
+        "max": [
+          0.5,
+          0.9,
+          1.045
+        ],
+        "dimensions_m": [
+          1.0,
+          0.9,
+          2.09
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "bookshelf.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\bookshelf.glb",
+      "file_bytes": 72568,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_metal",
+          "base_color": [
+            0.09989872574806213,
+            0.12213877588510513,
+            0.14126329123973846,
+            1
+          ],
+          "metallic": 0.75,
+          "roughness": 0.36000001430511475,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_sage",
+          "base_color": [
+            0.13286831974983215,
+            0.21223075687885284,
+            0.16202937066555023,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.7599999904632568,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_linen",
+          "base_color": [
+            0.48514994978904724,
+            0.423267662525177,
+            0.31854677200317383,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8999999761581421,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_blue",
+          "base_color": [
+            0.09530746936798096,
+            0.16513219475746155,
+            0.20863686501979828,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.800000011920929,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric_light",
+          "base_color": [
+            0.672443151473999,
+            0.637596845626831,
+            0.5583403706550598,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8799999952316284,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 8,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 908,
+      "vertices": 1960,
+      "primitive_count": 8,
+      "bounds_y_up": {
+        "min": [
+          -0.4,
+          0.0,
+          -0.19
+        ],
+        "max": [
+          0.4,
+          1.8,
+          0.19
+        ],
+        "dimensions_m": [
+          0.8,
+          1.8,
+          0.38
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "cabinet_simple.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\cabinet_simple.glb",
+      "file_bytes": 49908,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 3,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 616,
+      "vertices": 1344,
+      "primitive_count": 3,
+      "bounds_y_up": {
+        "min": [
+          -0.47,
+          0.0,
+          -0.2315
+        ],
+        "max": [
+          0.47,
+          0.9,
+          0.2315
+        ],
+        "dimensions_m": [
+          0.94,
+          0.9,
+          0.463
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "chair_office.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\chair_office.glb",
+      "file_bytes": 73364,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_metal",
+          "base_color": [
+            0.09989872574806213,
+            0.12213877588510513,
+            0.14126329123973846,
+            1
+          ],
+          "metallic": 0.75,
+          "roughness": 0.36000001430511475,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_rubber",
+          "base_color": [
+            0.03433980792760849,
+            0.039546236395835876,
+            0.0423114113509655,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8500000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric",
+          "base_color": [
+            0.28744083642959595,
+            0.3277781009674072,
+            0.2961382567882538,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8500000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 4,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 1168,
+      "vertices": 1944,
+      "primitive_count": 4,
+      "bounds_y_up": {
+        "min": [
+          -0.3225,
+          0.0,
+          -0.292551
+        ],
+        "max": [
+          0.3225,
+          0.97,
+          0.292551
+        ],
+        "dimensions_m": [
+          0.645,
+          0.97,
+          0.585102
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "chair_standard.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\chair_standard.glb",
+      "file_bytes": 38324,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_fabric_light",
+          "base_color": [
+            0.672443151473999,
+            0.637596845626831,
+            0.5583403706550598,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8799999952316284,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 3,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 480,
+      "vertices": 1008,
+      "primitive_count": 3,
+      "bounds_y_up": {
+        "min": [
+          -0.23,
+          0.0,
+          -0.23
+        ],
+        "max": [
+          0.23,
+          0.88,
+          0.23
+        ],
+        "dimensions_m": [
+          0.46,
+          0.88,
+          0.46
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "desk_small.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\desk_small.glb",
+      "file_bytes": 40764,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 3,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 504,
+      "vertices": 1080,
+      "primitive_count": 3,
+      "bounds_y_up": {
+        "min": [
+          -0.55,
+          0.0,
+          -0.28
+        ],
+        "max": [
+          0.55,
+          0.75,
+          0.28
+        ],
+        "dimensions_m": [
+          1.1,
+          0.75,
+          0.56
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "door_simple.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\door_simple.glb",
+      "file_bytes": 22064,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_metal",
+          "base_color": [
+            0.09989872574806213,
+            0.12213877588510513,
+            0.14126329123973846,
+            1
+          ],
+          "metallic": 0.75,
+          "roughness": 0.36000001430511475,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 2,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 396,
+      "vertices": 544,
+      "primitive_count": 2,
+      "bounds_y_up": {
+        "min": [
+          -0.001,
+          0.0,
+          -0.055908
+        ],
+        "max": [
+          0.9,
+          2.04,
+          0.055908
+        ],
+        "dimensions_m": [
+          0.901,
+          2.04,
+          0.111817
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "lamp_floor.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\lamp_floor.glb",
+      "file_bytes": 25608,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_metal",
+          "base_color": [
+            0.09989872574806213,
+            0.12213877588510513,
+            0.14126329123973846,
+            1
+          ],
+          "metallic": 0.75,
+          "roughness": 0.36000001430511475,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric_light",
+          "base_color": [
+            0.672443151473999,
+            0.637596845626831,
+            0.5583403706550598,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8799999952316284,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_white",
+          "base_color": [
+            0.8148465752601624,
+            0.7991027235984802,
+            0.7379103899002075,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6499999761581421,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 4,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 496,
+      "vertices": 578,
+      "primitive_count": 4,
+      "bounds_y_up": {
+        "min": [
+          -0.225,
+          0.0,
+          -0.225
+        ],
+        "max": [
+          0.225,
+          1.6,
+          0.225
+        ],
+        "dimensions_m": [
+          0.45,
+          1.6,
+          0.45
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "rug_simple.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\rug_simple.glb",
+      "file_bytes": 11488,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_linen",
+          "base_color": [
+            0.48514994978904724,
+            0.423267662525177,
+            0.31854677200317383,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8999999761581421,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric",
+          "base_color": [
+            0.28744083642959595,
+            0.3277781009674072,
+            0.2961382567882538,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8500000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 2,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 132,
+      "vertices": 264,
+      "primitive_count": 2,
+      "bounds_y_up": {
+        "min": [
+          -0.8,
+          0.0,
+          -1.1
+        ],
+        "max": [
+          0.8,
+          0.0085,
+          1.1
+        ],
+        "dimensions_m": [
+          1.6,
+          0.0085,
+          2.2
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "shelf_open.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\shelf_open.glb",
+      "file_bytes": 30148,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_metal",
+          "base_color": [
+            0.09989872574806213,
+            0.12213877588510513,
+            0.14126329123973846,
+            1
+          ],
+          "metallic": 0.75,
+          "roughness": 0.36000001430511475,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 3,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 380,
+      "vertices": 808,
+      "primitive_count": 3,
+      "bounds_y_up": {
+        "min": [
+          -0.4,
+          0.0,
+          -0.19
+        ],
+        "max": [
+          0.4,
+          1.8,
+          0.19
+        ],
+        "dimensions_m": [
+          0.8,
+          1.8,
+          0.38
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "sofa_2seat.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\sofa_2seat.glb",
+      "file_bytes": 118020,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric",
+          "base_color": [
+            0.28744083642959595,
+            0.3277781009674072,
+            0.2961382567882538,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8500000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric_light",
+          "base_color": [
+            0.672443151473999,
+            0.637596845626831,
+            0.5583403706550598,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8799999952316284,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 3,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 1600,
+      "vertices": 3288,
+      "primitive_count": 3,
+      "bounds_y_up": {
+        "min": [
+          -0.81,
+          0.0,
+          -0.43
+        ],
+        "max": [
+          0.81,
+          0.86,
+          0.43
+        ],
+        "dimensions_m": [
+          1.62,
+          0.86,
+          0.86
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "sofa_3seat.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\sofa_3seat.glb",
+      "file_bytes": 144852,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric",
+          "base_color": [
+            0.28744083642959595,
+            0.3277781009674072,
+            0.2961382567882538,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8500000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_fabric_light",
+          "base_color": [
+            0.672443151473999,
+            0.637596845626831,
+            0.5583403706550598,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8799999952316284,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 3,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 1976,
+      "vertices": 4056,
+      "primitive_count": 3,
+      "bounds_y_up": {
+        "min": [
+          -1.09,
+          0.0,
+          -0.43
+        ],
+        "max": [
+          1.09,
+          0.86,
+          0.43
+        ],
+        "dimensions_m": [
+          2.18,
+          0.86,
+          0.86
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "stool_round.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\stool_round.glb",
+      "file_bytes": 18948,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 2,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 348,
+      "vertices": 456,
+      "primitive_count": 2,
+      "bounds_y_up": {
+        "min": [
+          -0.185,
+          0.0,
+          -0.185
+        ],
+        "max": [
+          0.185,
+          0.445515,
+          0.185
+        ],
+        "dimensions_m": [
+          0.37,
+          0.445515,
+          0.37
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "table_coffee.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\table_coffee.glb",
+      "file_bytes": 23140,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 2,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 284,
+      "vertices": 600,
+      "primitive_count": 2,
+      "bounds_y_up": {
+        "min": [
+          -0.5,
+          0.0,
+          -0.275
+        ],
+        "max": [
+          0.5,
+          0.4,
+          0.275
+        ],
+        "dimensions_m": [
+          1.0,
+          0.4,
+          0.55
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "table_dining.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\table_dining.glb",
+      "file_bytes": 29820,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 2,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 372,
+      "vertices": 792,
+      "primitive_count": 2,
+      "bounds_y_up": {
+        "min": [
+          -0.7,
+          0.0,
+          -0.4
+        ],
+        "max": [
+          0.7,
+          0.75,
+          0.4
+        ],
+        "dimensions_m": [
+          1.4,
+          0.75,
+          0.8
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "table_side.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\table_side.glb",
+      "file_bytes": 23152,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_oak",
+          "base_color": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.18116424977779388,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.5799999833106995,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 2,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 284,
+      "vertices": 600,
+      "primitive_count": 2,
+      "bounds_y_up": {
+        "min": [
+          -0.225,
+          0.0,
+          -0.225
+        ],
+        "max": [
+          0.225,
+          0.5,
+          0.225
+        ],
+        "dimensions_m": [
+          0.45,
+          0.5,
+          0.45
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "trash_bin.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\furniture\\trash_bin.glb",
+      "file_bytes": 9948,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_dark",
+          "base_color": [
+            0.022173885256052017,
+            0.03189603239297867,
+            0.040915198624134064,
+            1
+          ],
+          "metallic": 0.15000000596046448,
+          "roughness": 0.5600000023841858,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 1,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 236,
+      "vertices": 224,
+      "primitive_count": 1,
+      "bounds_y_up": {
+        "min": [
+          -0.14,
+          0.0,
+          -0.14
+        ],
+        "max": [
+          0.14,
+          0.32,
+          0.14
+        ],
+        "dimensions_m": [
+          0.28,
+          0.32,
+          0.28
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "plant_indoor_tall.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\plants\\plant_indoor_tall.glb",
+      "file_bytes": 57660,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_ceramic",
+          "base_color": [
+            0.6938717365264893,
+            0.6444796919822693,
+            0.5520114302635193,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.44999998807907104,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_soil",
+          "base_color": [
+            0.05780543014407158,
+            0.040915198624134064,
+            0.028426039963960648,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 1,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_leaf",
+          "base_color": [
+            0.06301001459360123,
+            0.17464740574359894,
+            0.09305896610021591,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.699999988079071,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_leaf_light",
+          "base_color": [
+            0.16826939582824707,
+            0.28744083642959595,
+            0.1384316086769104,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.699999988079071,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 5,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 900,
+      "vertices": 1476,
+      "primitive_count": 5,
+      "bounds_y_up": {
+        "min": [
+          -0.425856,
+          0.0,
+          -0.376492
+        ],
+        "max": [
+          0.425856,
+          1.74,
+          0.376492
+        ],
+        "dimensions_m": [
+          0.851712,
+          1.74,
+          0.752984
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "plant_potted_medium.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\plants\\plant_potted_medium.glb",
+      "file_bytes": 47992,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_terracotta",
+          "base_color": [
+            0.46207699179649353,
+            0.23839756846427917,
+            0.15292614698410034,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8500000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_soil",
+          "base_color": [
+            0.05780543014407158,
+            0.040915198624134064,
+            0.028426039963960648,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 1,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_leaf",
+          "base_color": [
+            0.06301001459360123,
+            0.17464740574359894,
+            0.09305896610021591,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.699999988079071,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_leaf_light",
+          "base_color": [
+            0.16826939582824707,
+            0.28744083642959595,
+            0.1384316086769104,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.699999988079071,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 5,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 760,
+      "vertices": 1200,
+      "primitive_count": 5,
+      "bounds_y_up": {
+        "min": [
+          -0.187695,
+          0.0,
+          -0.170235
+        ],
+        "max": [
+          0.187695,
+          0.8627,
+          0.170235
+        ],
+        "dimensions_m": [
+          0.37539,
+          0.8627,
+          0.340469
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "plant_potted_small.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\plants\\plant_potted_small.glb",
+      "file_bytes": 36000,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_ceramic",
+          "base_color": [
+            0.6938717365264893,
+            0.6444796919822693,
+            0.5520114302635193,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.44999998807907104,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_soil",
+          "base_color": [
+            0.05780543014407158,
+            0.040915198624134064,
+            0.028426039963960648,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 1,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_walnut",
+          "base_color": [
+            0.17144110798835754,
+            0.11697066575288773,
+            0.07036009430885315,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.6000000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_leaf",
+          "base_color": [
+            0.06301001459360123,
+            0.17464740574359894,
+            0.09305896610021591,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.699999988079071,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        },
+        {
+          "name": "IDAR_leaf_light",
+          "base_color": [
+            0.16826939582824707,
+            0.28744083642959595,
+            0.1384316086769104,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.699999988079071,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 5,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 592,
+      "vertices": 857,
+      "primitive_count": 5,
+      "bounds_y_up": {
+        "min": [
+          -0.105,
+          0.0,
+          -0.105
+        ],
+        "max": [
+          0.105,
+          0.4015,
+          0.105
+        ],
+        "dimensions_m": [
+          0.21,
+          0.4015,
+          0.21
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    },
+    {
+      "filename": "pot_empty.glb",
+      "path": "E:\\Projects\\InteLiDar\\models\\plants\\pot_empty.glb",
+      "file_bytes": 9932,
+      "failures": [],
+      "warnings": [],
+      "materials": [
+        {
+          "name": "IDAR_terracotta",
+          "base_color": [
+            0.46207699179649353,
+            0.23839756846427917,
+            0.15292614698410034,
+            1
+          ],
+          "metallic": 0,
+          "roughness": 0.8500000238418579,
+          "alpha_mode": "OPAQUE",
+          "double_sided": false
+        }
+      ],
+      "material_count": 1,
+      "mesh_count": 1,
+      "node_count": 1,
+      "skins_count": 0,
+      "joint_counts": [],
+      "triangles": 236,
+      "vertices": 224,
+      "primitive_count": 1,
+      "bounds_y_up": {
+        "min": [
+          -0.15,
+          0.0,
+          -0.15
+        ],
+        "max": [
+          0.15,
+          0.24,
+          0.15
+        ],
+        "dimensions_m": [
+          0.3,
+          0.24,
+          0.3
+        ]
+      },
+      "origin": "identity root; base at glTF Y=0",
+      "animations": [],
+      "embedded_only": true,
+      "gltf_version": "2.0",
+      "extras": {},
+      "ok": true
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,18 @@
+---
+description: Always use TDD. Write a failing test before production code.
+alwaysApply: true
+---
+
+# Test-driven development
+
+InteLiDar is built **test-first**. This is a hard rule.
+
+1. Write a failing test for the behaviour.
+2. Run it and confirm it fails for the right reason.
+3. Write the smallest production change that passes.
+4. Refactor only while tests stay green.
+5. Do not implement features, fixes, or refactors without a failing test first. Tests added after the code are not TDD.
+
+Prefer tests on domain logic: scene graph queries, reconstruct state, highlight ids, API adapters. Keep Three.js and HUD layout tests thin.
+
+If Vitest is missing, install it as part of the first test. See docs/development.md, CONTRIBUTING.md, and design.md → Test seams.
