@@ -20,11 +20,9 @@ def test_reconstruct_preserves_custom_appearance() -> None:
 
 def test_demo_contains_kirana_billing_and_shelf_racks() -> None:
     result = reconstruct_scene(ingest_capture(IngestRequest()))
-    # Kirana store uses stool_round for the cashier and shelf_rack_shop for product shelves
-    chairs = [obj for obj in result.graph.objects if obj.type == "chair"]
-    assert {"stool_round", "chair_cafe", "sofa_2seat"}.issubset({chair.asset_id for chair in chairs})
     shelves = [obj for obj in result.graph.objects if obj.asset_id == "shelf_rack_shop"]
-    assert len(shelves) >= 4  # rice, oil, dal, soap, snacks
+    assert len(shelves) >= 7  # product shelves plus the front replacement racks
+    assert not any(obj.type == "chair" for obj in result.graph.objects)
 
 
 def test_demo_includes_detailed_stock_shelves() -> None:

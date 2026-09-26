@@ -10,12 +10,6 @@ from app.services.reasoner import Reasoner, valid_highlight_ids
 def ask_scene(graph: SceneGraph, question: str, reasoner: Reasoner | None = None) -> AskResult:
     if not question.strip():
         raise ValueError("question is required")
-    inventory_terms = (
-        "stock", "sell", "selling", "sales", "restock", "reorder",
-        "low inventory", "eye level", "placement",
-    )
-    if any(term in question.lower() for term in inventory_terms):
-        return heuristic_ask(graph, question)
     if reasoner is not None:
         result = reasoner.ask(graph, question)
         return AskResult(reply=result.reply, highlight_ids=valid_highlight_ids(graph, result.highlight_ids))
@@ -35,7 +29,7 @@ def heuristic_ask(graph: SceneGraph, question: str) -> AskResult:
     room = graph.room
     stock_items = [(obj, _stock_count(obj)) for obj in graph.objects if _stock_count(obj) is not None]
 
-    if any(term in q for term in ("sells the most", "selling most", "best selling", "fastest", "sales")):
+    if any(term in q for term in ("sells the most", "selling most", "best selling", "fastest", "sales", "sales impact", "most impact")):
         fastest = max(inventory, key=lambda item: item["daily_sales"], default=None)
         if fastest is not None:
             obj = _object_by_id(graph, fastest["shelf_id"])
@@ -93,6 +87,15 @@ def heuristic_ask(graph: SceneGraph, question: str) -> AskResult:
         return AskResult(
             reply="Soap Packets are at warning stock with 5 units. Highlighting the soap shelf.",
             highlight_ids=_product_highlights(graph, "soap", "soap-shelf"),
+        )
+    if "cold drink" in q or "cold drinks" in q or "beverage" in q or "beverages" in q:
+        matches = [
+            obj for obj in graph.objects
+            if any(term in obj.label.lower() for term in ("cold drink", "drink", "fridge", "beverage"))
+        ]
+        return AskResult(
+            reply="The cold drinks fridge is at the front display area of the shop. I am highlighting it for you.",
+            highlight_ids=[obj.id for obj in matches],
         )
     if "critical" in q or "reorder" in q:
         names = ", ".join(obj.label for obj in critical) or "none"

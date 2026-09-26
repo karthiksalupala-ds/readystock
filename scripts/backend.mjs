@@ -16,14 +16,19 @@ export function backendInvocation(mode, {
   if (mode !== 'serve' && mode !== 'test') throw new Error('Usage: node scripts/backend.mjs <serve|test> [additional arguments]')
   const paths = platform === 'win32' ? path.win32 : path.posix
   const backend = paths.join(projectRoot, 'backend')
-  const defaultPython = paths.join(backend, '.venv', ...(platform === 'win32' ? ['Scripts', 'python.exe'] : ['bin', 'python']))
+  const pythonParts = platform === 'win32' ? ['Scripts', 'python.exe'] : ['bin', 'python']
+  const backendPython = paths.join(backend, '.venv', ...pythonParts)
+  const rootPython = paths.join(projectRoot, '.venv', ...pythonParts)
   const override = env.INTELIDAR_PYTHON?.trim()
-  const command = override ? paths.resolve(projectRoot, override) : defaultPython
+  const command = override
+    ? paths.resolve(projectRoot, override)
+    : (exists(backendPython) ? backendPython : rootPython)
   if (!exists(command)) {
-    throw new Error(`Python executable not found: ${command}\nCreate backend/.venv with Python 3.11+ and install backend dependencies (see docs/getting-started.md), or set INTELIDAR_PYTHON to an existing Python executable path.`)
+    throw new Error(`Python executable not found: ${backendPython} or ${rootPython}\nCreate a virtual environment and install backend dependencies (see docs/getting-started.md), or set INTELIDAR_PYTHON to an existing Python executable path.`)
   }
+  const port = env.INTELIDAR_API_PORT?.trim() || '8000'
   const args = mode === 'serve'
-    ? ['-m', 'uvicorn', 'app.main:app', '--reload', '--host', '127.0.0.1', '--port', '8000', ...extraArgs]
+    ? ['-m', 'uvicorn', 'app.main:app', '--reload', '--host', '127.0.0.1', '--port', port, ...extraArgs]
     : ['-m', 'pytest', ...extraArgs]
   return { command, args, options: { cwd: backend, env, stdio: 'inherit', shell: false, windowsHide: true } }
 }

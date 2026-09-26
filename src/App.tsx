@@ -349,12 +349,13 @@ export default function App() {
   async function ask(question: string) {
     const version = sceneVersion.current
     const scene = twinGraph
-    if (mode !== 'twin' || !scene || question.trim().length === 0) return
-    setQuery(question)
-    setChatMessages((messages) => [...messages, { role: 'user', text: question.trim() }])
+    const trimmedQuestion = question.trim()
+    if (mode !== 'twin' || !scene || trimmedQuestion.length === 0) return
+    setQuery('')
+    setChatMessages((messages) => [...messages, { role: 'user', text: trimmedQuestion }])
     setChatLoading(true)
     try {
-      const result = await askScene(scene, question)
+      const result = await askScene(scene, trimmedQuestion)
       if (version !== sceneVersion.current) return
       setReply(result.reply)
       setChatMessages((messages) => [...messages, { role: 'assistant', text: result.reply }])

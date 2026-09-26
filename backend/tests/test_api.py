@@ -5,6 +5,7 @@ from fastapi.testclient import TestClient
 from app.main import create_app
 from app.models import AskResult
 from app.services.reasoner import Reasoner
+from app.services.inventory import load_demo_inventory
 
 
 class StubReasoner(Reasoner):
@@ -70,12 +71,39 @@ def test_cors_allows_vite_origin() -> None:
     assert response.headers.get("access-control-allow-origin") == "http://localhost:5173"
 
 
-def test_offline_provider_defaults_to_local_ollama(monkeypatch) -> None:  # type: ignore[no-untyped-def]
+def test_provider_defaults_to_openrouter_with_ollama_backup(monkeypatch) -> None:  # type: ignore[no-untyped-def]
     monkeypatch.delenv("LLM_PROVIDER", raising=False)
     monkeypatch.delenv("OLLAMA_BASE_URL", raising=False)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "sk-or-test")
+    from app.services.reasoner import OllamaReasoner, OpenAIReasoner, build_reasoner
+
+    reasoner = build_reasoner()
+    assert isinstance(reasoner, OpenAIReasoner)
+    assert isinstance(reasoner._fallback, OllamaReasoner)
+
+
+def test_ollama_provider_can_be_selected_directly(monkeypatch) -> None:  # type: ignore[no-untyped-def]
+    monkeypatch.setenv("LLM_PROVIDER", "ollama")
+    from app.services.reasoner import OllamaReasoner, build_reasoner
+
+    reasoner = build_reasoner()
+    assert isinstance(reasoner, OllamaReasoner)
+
+
+def test_openrouter_provider_requires_a_key(monkeypatch) -> None:  # type: ignore[no-untyped-def]
+    monkeypatch.setenv("LLM_PROVIDER", "openrouter")
+    monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)
     from app.services.reasoner import OllamaReasoner, build_reasoner
 
     assert isinstance(build_reasoner(), OllamaReasoner)
+
+
+def test_configured_inventory_path_resolves_from_repository_root(monkeypatch) -> None:  # type: ignore[no-untyped-def]
+    monkeypatch.setenv("DEMO_INVENTORY_PATH", "backend/app/demo_inventory.json")
+
+    inventory = load_demo_inventory()
+
+    assert inventory[0]["name"] == "Rice 5kg"
 
 
 def test_heuristic_provider_is_explicit_offline_fallback(monkeypatch) -> None:  # type: ignore[no-untyped-def]

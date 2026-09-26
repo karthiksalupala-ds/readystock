@@ -608,32 +608,6 @@
       "assetId": "computer_desktop"
     },
     {
-      "id": "cashier-stool",
-      "type": "chair",
-      "label": "Cashier Stool",
-      "category": "furniture",
-      "position": [
-        -1.45,
-        0.22275,
-        2.05
-      ],
-      "size": [
-        0.37,
-        0.4455,
-        0.37
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "material": null,
-      "confidence": null,
-      "color": "#64748b",
-      "shape": null,
-      "assetId": "stool_round"
-    },
-    {
       "id": "back-stock-cabinet",
       "type": "shelf",
       "label": "Back Stock Cabinet",
@@ -764,19 +738,19 @@
       "assetId": "stand_scale"
     },
     {
-      "id": "cafe-table-1",
-      "type": "table",
-      "label": "Cafe Table",
+      "id": "front-snack-rack",
+      "type": "shelf",
+      "label": "Front Snacks and Biscuits Rack",
       "category": "furniture",
       "position": [
-        -0.8,
-        0.37,
+        -1.8,
+        1.05,
         -1.0
       ],
       "size": [
-        0.76,
-        0.74,
-        0.76
+        1.2,
+        2.1,
+        0.5
       ],
       "rotation": [
         0,
@@ -785,76 +759,76 @@
       ],
       "material": null,
       "confidence": null,
-      "color": "#e2e8f0",
+      "color": "#10b981",
       "shape": null,
-      "assetId": "table_cafe"
+      "assetId": "shelf_rack_shop"
     },
     {
-      "id": "cafe-chair-1a",
-      "type": "chair",
-      "label": "Cafe Chair",
+      "id": "front-grocery-rack",
+      "type": "shelf",
+      "label": "Front Grocery and Grains Rack",
       "category": "furniture",
       "position": [
-        -1.3,
-        0.4,
+        0,
+        1.05,
         -1.0
       ],
       "size": [
-        0.48,
-        0.81,
-        0.48
+        1.2,
+        2.1,
+        0.5
       ],
       "rotation": [
         0,
-        1.5707963267948966,
+        0,
         0
       ],
       "material": null,
       "confidence": null,
-      "color": "#334155",
+      "color": "#10b981",
       "shape": null,
-      "assetId": "chair_cafe"
+      "assetId": "shelf_rack_shop"
     },
     {
-      "id": "cafe-chair-1b",
-      "type": "chair",
-      "label": "Cafe Chair",
+      "id": "front-personal-care-rack",
+      "type": "shelf",
+      "label": "Personal Care Products Rack",
       "category": "furniture",
       "position": [
-        -0.3,
-        0.4,
+        1.8,
+        1.05,
         -1.0
       ],
       "size": [
-        0.48,
-        0.81,
-        0.48
+        1.2,
+        2.1,
+        0.5
       ],
       "rotation": [
         0,
-        -1.5707963267948966,
+        0,
         0
       ],
       "material": null,
       "confidence": null,
-      "color": "#334155",
+      "color": "#10b981",
       "shape": null,
-      "assetId": "chair_cafe"
+      "assetId": "shelf_rack_shop"
     },
     {
-      "id": "cafe-table-2",
-      "type": "table",
-      "label": "Cafe Table",
+      "id": "front-snack-items",
+      "type": "box",
+      "label": "Biscuits and Snack Packs",
       "category": "furniture",
       "position": [
-        0.8,
-        0.37,
-        -1.0
+        -1.8,
+        1.45,
+        -0.62
       ],
       "size": [
-        0.76,
-        0.74,
-        0.76
+        0.72,
+        0.24,
+        0.18
       ],
       "rotation": [
         0,
@@ -863,113 +837,61 @@
       ],
       "material": null,
       "confidence": null,
-      "color": "#e2e8f0",
+      "color": "#f59e0b",
       "shape": null,
-      "assetId": "table_cafe"
+      "assetId": "crate_generic"
     },
     {
-      "id": "cafe-chair-2a",
-      "type": "chair",
-      "label": "Cafe Chair",
+      "id": "front-grocery-items",
+      "type": "box",
+      "label": "Rice and Dal Packs",
       "category": "furniture",
       "position": [
-        0.3,
-        0.4,
-        -1.0
+        0,
+        1.45,
+        -0.62
       ],
       "size": [
-        0.48,
-        0.81,
-        0.48
+        0.72,
+        0.24,
+        0.18
       ],
       "rotation": [
         0,
-        1.5707963267948966,
+        0,
         0
       ],
       "material": null,
       "confidence": null,
-      "color": "#334155",
+      "color": "#a16207",
       "shape": null,
-      "assetId": "chair_cafe"
+      "assetId": "crate_generic"
     },
     {
-      "id": "cafe-chair-2b",
-      "type": "chair",
-      "label": "Cafe Chair",
+      "id": "front-personal-care-items",
+      "type": "box",
+      "label": "Soap and Household Packs",
       "category": "furniture",
       "position": [
-        1.3,
-        0.4,
-        -1.0
+        1.8,
+        1.45,
+        -0.62
       ],
       "size": [
-        0.48,
-        0.81,
-        0.48
+        0.72,
+        0.24,
+        0.18
       ],
       "rotation": [
         0,
-        -1.5707963267948966,
+        0,
         0
       ],
       "material": null,
       "confidence": null,
-      "color": "#334155",
+      "color": "#60a5fa",
       "shape": null,
-      "assetId": "chair_cafe"
-    },
-    {
-      "id": "lounge-sofa",
-      "type": "chair",
-      "label": "Lounge Sofa",
-      "category": "furniture",
-      "position": [
-        -2.0,
-        0.43,
-        -3.5
-      ],
-      "size": [
-        1.62,
-        0.86,
-        0.86
-      ],
-      "rotation": [
-        0,
-        1.5707963267948966,
-        0
-      ],
-      "material": null,
-      "confidence": null,
-      "color": "#64748b",
-      "shape": null,
-      "assetId": "sofa_2seat"
-    },
-    {
-      "id": "lounge-table",
-      "type": "table",
-      "label": "Coffee Table",
-      "category": "furniture",
-      "position": [
-        -1.0,
-        0.2,
-        -3.5
-      ],
-      "size": [
-        1.0,
-        0.4,
-        0.55
-      ],
-      "rotation": [
-        0,
-        1.5707963267948966,
-        0
-      ],
-      "material": null,
-      "confidence": null,
-      "color": "#94a3b8",
-      "shape": null,
-      "assetId": "table_coffee"
+      "assetId": "crate_generic"
     },
     {
       "id": "bookshelf-display",

@@ -43,13 +43,12 @@ def test_ask_door_and_obstacles_use_graph_ids() -> None:
 
 def test_ask_filters_hallucinated_ids_from_reasoner() -> None:
     twin = _twin()
-    # cashier-stool is a real ID in the kirana scene; hallucinated-id is not
-    reasoner = FakeReasoner(AskResult(reply="Highlighting chairs.", highlight_ids=["cashier-stool", "hallucinated-id"]))
+    reasoner = FakeReasoner(AskResult(reply="Highlighting the rack.", highlight_ids=["front-snack-rack", "hallucinated-id"]))
     result = ask_scene(twin, "chairs", reasoner=reasoner)
 
     assert reasoner.called_with is not None
-    assert result.highlight_ids == ["cashier-stool"]
-    assert result.reply == "Highlighting chairs."
+    assert result.highlight_ids == ["front-snack-rack"]
+    assert result.reply == "Highlighting the rack."
 
 
 def test_ask_window_and_equipment_use_graph_ids() -> None:
@@ -89,3 +88,22 @@ def test_renovation_answers_follow_added_and_removed_furniture() -> None:
     obstacles = ask_scene(twin, "What could obstruct movement?")
     assert "added-sofa" in obstacles.highlight_ids
     assert "table-1" not in obstacles.highlight_ids
+
+
+def test_ask_sales_impact_returns_inventory_advice() -> None:
+    twin = _twin()
+    result = ask_scene(twin, "Which sales have most impact?")
+
+    assert "Rice 5kg" in result.reply
+    assert "units per day" in result.reply
+    assert result.highlight_ids == ["rice-shelf"]
+
+
+def test_ask_cold_drinks_uses_reasoner_when_available() -> None:
+    twin = _twin()
+    reasoner = FakeReasoner(AskResult(reply="generic response", highlight_ids=[]))
+    result = ask_scene(twin, "Where are the cold drinks?", reasoner=reasoner)
+
+    assert result.reply == "generic response"
+    assert result.highlight_ids == []
+    assert reasoner.called_with is not None

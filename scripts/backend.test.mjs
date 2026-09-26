@@ -3,7 +3,7 @@ import test from 'node:test'
 import { backendInvocation } from './backend.mjs'
 
 test('Windows uses the Scripts Python executable without invoking a shell', () => {
-  const invocation = backendInvocation('serve', { platform: 'win32', projectRoot: 'E:\\My Projects\\InteLiDar', env: {}, exists: () => true })
+  const invocation = backendInvocation('serve', { platform: 'win32', projectRoot: 'E:\\My Projects\\InteLiDar', env: {}, exists: (candidate) => candidate.includes('backend') })
   assert.equal(invocation.command, 'E:\\My Projects\\InteLiDar\\backend\\.venv\\Scripts\\python.exe')
   assert.deepEqual(invocation.args, ['-m', 'uvicorn', 'app.main:app', '--reload', '--host', '127.0.0.1', '--port', '8000'])
   assert.equal(invocation.options.cwd, 'E:\\My Projects\\InteLiDar\\backend')
@@ -12,8 +12,18 @@ test('Windows uses the Scripts Python executable without invoking a shell', () =
   assert.equal(invocation.options.stdio, 'inherit')
 })
 
+test('serve accepts an API port override', () => {
+  const invocation = backendInvocation('serve', {
+    platform: 'win32',
+    projectRoot: 'E:\\My Projects\\InteLiDar',
+    env: { INTELIDAR_API_PORT: '8020' },
+    exists: () => true,
+  })
+  assert.equal(invocation.args.at(-1), '8020')
+})
+
 test('POSIX uses the bin Python executable and passes pytest arguments literally', () => {
-  const invocation = backendInvocation('test', { platform: 'linux', projectRoot: '/projects/room', env: {}, exists: () => true, extraArgs: ['-q', 'tests/test_api.py'] })
+  const invocation = backendInvocation('test', { platform: 'linux', projectRoot: '/projects/room', env: {}, exists: (candidate) => candidate.includes('/backend/'), extraArgs: ['-q', 'tests/test_api.py'] })
   assert.equal(invocation.command, '/projects/room/backend/.venv/bin/python')
   assert.deepEqual(invocation.args, ['-m', 'pytest', '-q', 'tests/test_api.py'])
   assert.equal(invocation.options.cwd, '/projects/room/backend')
@@ -31,7 +41,7 @@ test('an explicit Python executable overrides the project virtual environment', 
 })
 
 test('missing Python points to virtual environment setup and the override', () => {
-  assert.throws(() => backendInvocation('test', { platform: 'win32', projectRoot: 'E:\\Projects\\InteLiDar', env: {}, exists: () => false }), /backend.*\.venv.*INTELIDAR_PYTHON/s)
+  assert.throws(() => backendInvocation('test', { platform: 'win32', projectRoot: 'E:\\Projects\\InteLiDar', env: {}, exists: () => false }), /backend.*\.venv.*or.*\.venv.*INTELIDAR_PYTHON/s)
 })
 
 test('unknown launcher modes fail with usage instead of starting Python', () => {

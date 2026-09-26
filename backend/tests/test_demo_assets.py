@@ -27,7 +27,8 @@ def test_kirana_scene_has_expected_ids():
         "rice-shelf", "oil-shelf", "dal-shelf", "soap-shelf",
         "billing-counter", "shop-entrance",
         "pos-monitor", "pos-keyboard", "pos-cpu",
-        "cashier-stool", "grain-sack-cluster", "snacks-rack",
+        "front-snack-rack", "front-grocery-rack", "front-personal-care-rack",
+        "grain-sack-cluster", "snacks-rack",
         "cold-drinks-fridge", "weighing-scale",
     }
     for oid in required:
@@ -41,3 +42,9 @@ def test_shelf_racks_have_correct_asset():
             assert obj.asset_id == "shelf_rack_shop", (
                 f"{obj.id} has unexpected asset_id: {obj.asset_id}"
             )
+
+
+def test_kirana_scene_has_no_seating_furniture():
+    objects = demo_twin_graph().objects
+    assert not any(obj.type == "chair" for obj in objects)
+    assert not any(obj.asset_id in {"chair_cafe", "sofa_2seat", "stool_round"} for obj in objects)

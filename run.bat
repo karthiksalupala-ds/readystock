@@ -5,8 +5,8 @@ if /i "%~1"=="backend" goto :backend
 if /i "%~1"=="frontend" goto :frontend
 
 rem Start the InteLiDar backend and Vite frontend in separate terminals.
-rem The Python override avoids relying on a virtual environment copied from
-rem another machine. It requires Python 3.11+ registered with the py launcher.
+rem Prefer the repository virtual environment so the backend dependencies match
+rem this checkout. Set INTELIDAR_PYTHON before running to override it.
 where npm.cmd >nul 2>nul
 if errorlevel 1 (
   echo Node.js/npm was not found on PATH.
@@ -14,10 +14,11 @@ if errorlevel 1 (
   exit /b 1
 )
 
-for /f "delims=" %%P in ('py -3 -c "import sys; print(sys.executable)" 2^>nul') do set "INTELIDAR_PYTHON=%%P"
+if exist "%~dp0.venv\Scripts\python.exe" set "INTELIDAR_PYTHON=%~dp0.venv\Scripts\python.exe"
+if not defined INTELIDAR_PYTHON for /f "delims=" %%P in ('py -3 -c "import sys; print(sys.executable)" 2^>nul') do set "INTELIDAR_PYTHON=%%P"
 if not defined INTELIDAR_PYTHON (
-  echo Python 3.11+ was not found through the Windows py launcher.
-  echo Install Python 3.11+ or set INTELIDAR_PYTHON before running this file.
+  echo No Python interpreter was found.
+  echo Install dependencies in .venv or set INTELIDAR_PYTHON before running this file.
   pause
   exit /b 1
 )
@@ -31,6 +32,10 @@ goto :eof
 
 :backend
 set "INTELIDAR_PYTHON=%INTELIDAR_PYTHON%"
+set "INTELIDAR_API_PORT=8020"
+if not defined INTELIDAR_PYTHON (
+  if exist "%~dp0.venv\Scripts\python.exe" set "INTELIDAR_PYTHON=%~dp0.venv\Scripts\python.exe"
+)
 if not defined INTELIDAR_PYTHON (
   for /f "delims=" %%P in ('py -3 -c "import sys; print(sys.executable)" 2^>nul') do set "INTELIDAR_PYTHON=%%P"
 )
@@ -38,5 +43,6 @@ npm.cmd run backend
 goto :eof
 
 :frontend
+set "INTELIDAR_API_URL=http://127.0.0.1:8020"
 npm.cmd run dev -- --host 127.0.0.1 --port 5176
 goto :eof

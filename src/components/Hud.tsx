@@ -312,7 +312,7 @@ export function Hud({
           ))}
           {chatLoading && <div className="chat-message assistant"><span className="chat-message-role">ReadyStock AI</span><p className="chat-thinking">Thinking…</p></div>}
         </div>
-        {askReady && (
+        {askReady && chatMessages.length === 0 && (
           <div className="suggestions">
             {SUGGESTIONS.map((item) => (
               <button key={item} type="button" onClick={() => onAskSuggestion(item)}>

@@ -53,6 +53,14 @@ describe('Hud', () => {
     expect(props.onAskSuggestion).toHaveBeenCalledWith('Show me all the chairs.')
   })
 
+  it('hides quick suggestions after chat has started', () => {
+    renderHud({
+      mode: 'twin',
+      chatMessages: [{ role: 'user', text: 'Which product sells the most?' }],
+    })
+    expect(screen.queryByRole('button', { name: 'Which product sells the most?' })).not.toBeInTheDocument()
+  })
+
   it('shows analysis steps while reconstructing and disables edit', () => {
     renderHud({ mode: 'analysing' })
     const status = screen.getByRole('status')
