@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 
 from app.models import AskResult, SceneGraph, SceneObject
-from app.services.inventory import DemoInventoryItem, load_demo_inventory
+from app.services.inventory import load_demo_inventory
 from app.services.reasoner import Reasoner, valid_highlight_ids
 
 
