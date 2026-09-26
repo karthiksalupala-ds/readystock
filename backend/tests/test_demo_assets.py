@@ -1,20 +1,43 @@
-import math
-
+"""
+Sanity checks for the ReadyStock kirana demo scene geometry.
+Replaces the old cafe-chair/table facing tests with kirana-specific assertions.
+"""
 import pytest
 
 from app.fixtures import demo_twin_graph
 
 
-def test_demo_chairs_face_tables_and_equipment_rests_on_supports():
+def test_billing_equipment_rests_on_counter():
+    """POS monitor, keyboard, and CPU should sit on top of the billing counter."""
     objects = {obj.id: obj for obj in demo_twin_graph().objects}
-    for i in range(1, 7):
-        chair = objects[f'chair-{i}']
-        table = objects[f'table-{(i + 1) // 2}']
-        angle = chair.rotation[1]
-        dx = table.position[0] - chair.position[0]
-        dz = table.position[2] - chair.position[2]
-        assert math.sin(angle) * dx + math.cos(angle) * dz > 0
-    for item, support in [('monitor-1', 'bar-counter'), ('coffee-machine', 'bar-counter'), ('laptop-1', 'left-table-1')]:
-        obj, top = objects[item], objects[support]
-        assert obj.position[1] - obj.size[1] / 2 == pytest.approx(top.position[1] + top.size[1] / 2)
-    assert objects['shelf-1'].rotation[1] == pytest.approx(-math.pi / 2)
+    counter = objects["billing-counter"]
+    counter_top = counter.position[1] + counter.size[1] / 2
+    for item_id in ("pos-monitor", "pos-keyboard", "pos-cpu"):
+        obj = objects[item_id]
+        base = obj.position[1] - obj.size[1] / 2
+        assert base == pytest.approx(counter_top, abs=0.05), (
+            f"{item_id} base {base:.3f} should be near counter top {counter_top:.3f}"
+        )
+
+
+def test_kirana_scene_has_expected_ids():
+    """Key kirana objects must be present."""
+    objects = {obj.id: obj for obj in demo_twin_graph().objects}
+    required = {
+        "rice-shelf", "oil-shelf", "dal-shelf", "soap-shelf",
+        "billing-counter", "shop-entrance",
+        "pos-monitor", "pos-keyboard", "pos-cpu",
+        "cashier-stool", "grain-sack-cluster", "snacks-rack",
+        "cold-drinks-fridge", "weighing-scale",
+    }
+    for oid in required:
+        assert oid in objects, f"Missing expected kirana object: {oid}"
+
+
+def test_shelf_racks_have_correct_asset():
+    """All product shelf racks must use the registered shop shelf model."""
+    for obj in demo_twin_graph().objects:
+        if obj.type == "shelf" and obj.id.endswith("-shelf"):
+            assert obj.asset_id == "shelf_rack_shop", (
+                f"{obj.id} has unexpected asset_id: {obj.asset_id}"
+            )

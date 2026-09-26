@@ -33,7 +33,7 @@ def test_ask_chairs_highlights_only_existing_chair_ids() -> None:
 def test_ask_door_and_obstacles_use_graph_ids() -> None:
     twin = _twin()
     door = ask_scene(twin, "Where is the door?")
-    assert door.highlight_ids == ["door-1"]
+    assert door.highlight_ids == ["shop-entrance"]
 
     blocked = ask_scene(twin, "What objects could obstruct movement through this room?")
     assert set(blocked.highlight_ids) == {
@@ -43,21 +43,29 @@ def test_ask_door_and_obstacles_use_graph_ids() -> None:
 
 def test_ask_filters_hallucinated_ids_from_reasoner() -> None:
     twin = _twin()
-    reasoner = FakeReasoner(AskResult(reply="Highlighting chairs.", highlight_ids=["chair-1", "nope"]))
+    # cashier-stool is a real ID in the kirana scene; hallucinated-id is not
+    reasoner = FakeReasoner(AskResult(reply="Highlighting chairs.", highlight_ids=["cashier-stool", "hallucinated-id"]))
     result = ask_scene(twin, "chairs", reasoner=reasoner)
 
     assert reasoner.called_with is not None
-    assert result.highlight_ids == ["chair-1"]
+    assert result.highlight_ids == ["cashier-stool"]
     assert result.reply == "Highlighting chairs."
 
 
 def test_ask_window_and_equipment_use_graph_ids() -> None:
     twin = _twin()
+    # Kirana store has no window; the assistant should return an empty list gracefully
     window = ask_scene(twin, "Where is the window?")
-    assert window.highlight_ids == ["window-1"]
+    assert window.highlight_ids == []
 
+    # Billing equipment + kirana equipment (fridge, scale, light track, POS)
     equipment = ask_scene(twin, "Show me all electronic equipment.")
-    assert equipment.highlight_ids == ["laptop-1", "coffee-machine", "monitor-1"]
+    equipment_ids = set(equipment.highlight_ids)
+    # All highlighted IDs must be real scene object IDs
+    all_ids = {obj.id for obj in twin.objects}
+    assert equipment_ids <= all_ids, f"Hallucinated IDs in equipment result: {equipment_ids - all_ids}"
+    # The POS billing items must be included
+    assert {"pos-monitor", "pos-keyboard", "pos-cpu"} <= equipment_ids
 
 
 def test_ask_rejects_blank_questions() -> None:

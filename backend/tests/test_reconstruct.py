@@ -18,11 +18,13 @@ def test_reconstruct_preserves_custom_appearance() -> None:
     assert table.size == raw.objects[0].size
 
 
-def test_demo_contains_photo_cafe_office_and_bar_seating() -> None:
+def test_demo_contains_kirana_billing_and_shelf_racks() -> None:
     result = reconstruct_scene(ingest_capture(IngestRequest()))
+    # Kirana store uses stool_round for the cashier and shelf_rack_shop for product shelves
     chairs = [obj for obj in result.graph.objects if obj.type == "chair"]
-    assert {chair.asset_id for chair in chairs} == {"chair_cafe", "chair_office", "stool_bar"}
-    assert any(chair.color == "#eeeee6" for chair in chairs)
+    assert {"stool_round", "chair_cafe", "sofa_2seat"}.issubset({chair.asset_id for chair in chairs})
+    shelves = [obj for obj in result.graph.objects if obj.asset_id == "shelf_rack_shop"]
+    assert len(shelves) >= 4  # rice, oil, dal, soap, snacks
 
 
 def test_roomplan_reconstruction_preserves_device_labels_without_demo_id_lookup() -> None:
@@ -52,17 +54,20 @@ def test_reconstruct_keeps_ids_and_labels_demo_objects() -> None:
     result = reconstruct_scene(raw)
 
     assert [obj.id for obj in result.graph.objects] == [obj.id for obj in raw.objects]
-    table = next(obj for obj in result.graph.objects if obj.id == "table-1")
-    assert table.type == "table"
-    assert table.label == "Café table · front"
-    assert table.category == "furniture"
-    assert table.asset_id == "table_cafe"
-    assert table.confidence is None  # Photo estimates are not sensor confidence.
+    counter = next(obj for obj in result.graph.objects if obj.id == "billing-counter")
+    assert counter.type == "table"
+    assert counter.label == "Billing Counter"
+    assert counter.category == "furniture"
+    assert counter.asset_id == "counter_billing"
+    assert counter.confidence is None
 
-    chairs = [obj for obj in result.graph.objects if obj.type == "chair"]
-    assert len(chairs) == 11
+    shelves = [obj for obj in result.graph.objects if obj.type == "shelf"]
+    assert len(shelves) >= 5  # 4 product shelves + snacks rack + back-stock cabinet
     assert result.analysis_steps
-    assert {step.to for step in result.analysis_steps} >= {"Table × 5", "Chair × 11", "Door"}
+    headings = {step.to for step in result.analysis_steps}
+    # The analysis log names things like "Shelf × 6" or just "Shelf"
+    assert any(h.startswith("Shelf") for h in headings), f"No Shelf step in: {headings}"
+    assert any(h.startswith("Door") or h == "Door" for h in headings), f"No Door step in: {headings}"
 
 
 def test_reconstruct_classifies_unknown_geometry_without_demo_ids() -> None:

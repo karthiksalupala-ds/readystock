@@ -11,6 +11,8 @@ const LABELS: Record<string, string> = {
   chair_standard: 'Dining chair', chair_office: 'Office chair', stool_round: 'Round stool',
   table_dining: 'Dining table', table_side: 'Side table', table_coffee: 'Coffee table',
   cabinet_simple: 'Cabinet', shelf_open: 'Open shelf', bookshelf: 'Bookshelf', desk_small: 'Desk',
+  shelf_rack_shop: 'Shop shelf rack', counter_billing: 'Billing counter', fridge_drinks: 'Drinks fridge',
+  crate_generic: 'Generic crate', sack_generic: 'Generic sack', stand_scale: 'Weighing scale',
   sofa_2seat: 'Two-seat sofa', sofa_3seat: 'Three-seat sofa', bed_single: 'Single bed', bed_double: 'Double bed',
   lamp_floor: 'Floor lamp', rug_simple: 'Rug', trash_bin: 'Waste bin',
   plant_potted_small: 'Small potted plant', plant_potted_medium: 'Medium potted plant', plant_indoor_tall: 'Tall indoor plant', pot_empty: 'Plant pot',

@@ -967,6 +967,127 @@
         "Cafe_oak6",
         "Cafe_oak4"
       ]
+    },
+    {
+      "id": "shelf_rack_shop",
+      "category": "furniture",
+      "file": "furniture/shelf_rack_shop.glb",
+      "description": "KayKit large shelf rack for ReadyStock inventory zones",
+      "triangles": 212,
+      "vertices": 276,
+      "bytes": 27068,
+      "dimensions_m": {
+        "width": 2.0,
+        "height": 0.40000066,
+        "depth": 0.50000007
+      },
+      "origin": "model bounds centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "furniture_texture"
+      ]
+    },
+    {
+      "id": "counter_billing",
+      "category": "furniture",
+      "file": "furniture/counter_billing.glb",
+      "description": "KayKit straight kitchen counter used as a billing counter",
+      "triangles": 168,
+      "vertices": 231,
+      "bytes": 30756,
+      "dimensions_m": {
+        "width": 2.0,
+        "height": 1.0,
+        "depth": 2.04190302
+      },
+      "origin": "model bounds centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "fridge_drinks",
+      "category": "furniture",
+      "file": "furniture/fridge_drinks.glb",
+      "description": "KayKit two-door refrigerator used as a cold drinks fridge",
+      "triangles": 614,
+      "vertices": 728,
+      "bytes": 50808,
+      "dimensions_m": {
+        "width": 2.0,
+        "height": 2.5,
+        "depth": 2.24003255
+      },
+      "origin": "model bounds centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "crate_generic",
+      "category": "furniture",
+      "file": "furniture/crate_generic.glb",
+      "description": "KayKit empty crate for generic packaged stock",
+      "triangles": 132,
+      "vertices": 256,
+      "bytes": 31392,
+      "dimensions_m": {
+        "width": 2.00000024,
+        "height": 0.8,
+        "depth": 2.00000465
+      },
+      "origin": "model bounds centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "sack_generic",
+      "category": "furniture",
+      "file": "furniture/sack_generic.glb",
+      "description": "Kenney closed cardboard package used as a generic sack substitute",
+      "triangles": 60,
+      "vertices": 176,
+      "bytes": 5400,
+      "dimensions_m": {
+        "width": 0.21249999,
+        "height": 0.281,
+        "depth": 0.21249999
+      },
+      "origin": "model bounds centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "wood",
+        "woodDark"
+      ]
+    },
+    {
+      "id": "stand_scale",
+      "category": "furniture",
+      "file": "furniture/stand_scale.glb",
+      "description": "KayKit small table used as a weighing-scale stand",
+      "triangles": 168,
+      "vertices": 260,
+      "bytes": 26224,
+      "dimensions_m": {
+        "width": 1.0,
+        "height": 1.00000001,
+        "depth": 1.0
+      },
+      "origin": "model bounds centre",
+      "rigged": false,
+      "animations": [],
+      "materials": [
+        "furniture_texture"
+      ]
     }
   ]
 }
