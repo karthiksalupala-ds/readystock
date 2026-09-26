@@ -1,4 +1,4 @@
-import { Color, DataTexture, LinearFilter, LinearMipmapLinearFilter, MeshStandardMaterial, RepeatWrapping, RGBAFormat } from 'three'
+import { Color, DataTexture, LinearFilter, LinearMipmapLinearFilter, MeshStandardMaterial, RepeatWrapping, RGBAFormat, type Texture } from 'three'
 
 /** Neutral, seamless surface maps: tint stays independent of the texture. */
 export function surfaceTexture(kind: string): DataTexture {
@@ -39,7 +39,7 @@ export function surfaceTexture(kind: string): DataTexture {
   return texture
 }
 
-export function makeSurface(color: string, finish: string, map?: DataTexture) {
+export function makeSurface(color: string, finish: string, map?: Texture) {
   const material = new MeshStandardMaterial({
     color, map, bumpMap: map,
     bumpScale: finish === 'fabric' ? 0.008 : finish === 'wood' ? 0.004 : 0.001,

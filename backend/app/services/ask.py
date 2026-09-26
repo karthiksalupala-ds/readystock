@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 
 from app.models import AskResult, SceneGraph, SceneObject
+from app.services.inventory import DemoInventoryItem, load_demo_inventory
 from app.services.reasoner import Reasoner, valid_highlight_ids
 
 
@@ -23,6 +24,7 @@ def ask_scene(graph: SceneGraph, question: str, reasoner: Reasoner | None = None
 
 def heuristic_ask(graph: SceneGraph, question: str) -> AskResult:
     q = question.lower()
+    inventory = load_demo_inventory()
     critical = [obj for obj in graph.objects if obj.color == "#ef4444"]
     chairs = _of_type(graph, "chair")
     tables = _of_type(graph, "table")
@@ -34,34 +36,43 @@ def heuristic_ask(graph: SceneGraph, question: str) -> AskResult:
     stock_items = [(obj, _stock_count(obj)) for obj in graph.objects if _stock_count(obj) is not None]
 
     if any(term in q for term in ("sells the most", "selling most", "best selling", "fastest", "sales")):
-        fastest = max(stock_items, key=lambda item: item[1], default=None)
+        fastest = max(inventory, key=lambda item: item["daily_sales"], default=None)
         if fastest is not None:
-            obj, count = fastest
+            obj = _object_by_id(graph, fastest["shelf_id"])
             return AskResult(
-                reply=f"{obj.label} has the highest available movement signal at {count} units. Keep it visible and well stocked.",
-                highlight_ids=[obj.id],
+                reply=f'{fastest["name"]} sells the fastest at {fastest["daily_sales"]} units per day. Current stock is {fastest["current_stock"]}; reorder {fastest["reorder_quantity"]} from {fastest["supplier"]}.',
+                highlight_ids=[fastest["shelf_id"]] if obj else [],
             )
     if any(term in q for term in ("sells the least", "selling least", "slowest", "least moving")):
-        slowest = min(stock_items, key=lambda item: item[1], default=None)
+        slowest = min(inventory, key=lambda item: item["daily_sales"], default=None)
         if slowest is not None:
-            obj, count = slowest
+            obj = _object_by_id(graph, slowest["shelf_id"])
             return AskResult(
-                reply=f"{obj.label} has the lowest movement signal at {count} units. Consider a lower-priority position.",
-                highlight_ids=[obj.id],
+                reply=f'{slowest["name"]} is the slowest-moving item at {slowest["daily_sales"]} units per day. Consider a lower-priority shelf position.',
+                highlight_ids=[slowest["shelf_id"]] if obj else [],
             )
+    if any(term in q for term in ("supplier", "vendor", "buy from")):
+        names = "; ".join(f'{item["name"]}: {item["supplier"]}' for item in inventory)
+        return AskResult(reply=f"Supplier list: {names}.", highlight_ids=[])
+    if any(term in q for term in ("margin", "profit", "profitable")):
+        best = max(inventory, key=lambda item: item["margin_percent"])
+        return AskResult(
+            reply=f'{best["name"]} has the highest margin at {best["margin_percent"]}%.',
+            highlight_ids=[best["shelf_id"]],
+        )
     if any(term in q for term in ("low stock", "low inventory", "running low", "restock plan", "stock plan")):
-        low = [(obj, count) for obj, count in stock_items if count <= 6]
-        names = ", ".join(f"{obj.label} ({count})" for obj, count in low) or "none"
+        low = [item for item in inventory if item["current_stock"] <= item["reorder_point"]]
+        names = ", ".join(f'{item["name"]} ({item["current_stock"]} left)' for item in low) or "none"
         return AskResult(
             reply=f"Low-stock items: {names}. Prioritize rice and other critical items before the next selling period.",
-            highlight_ids=[obj.id for obj, _ in low],
+            highlight_ids=[item["shelf_id"] for item in low],
         )
     if any(term in q for term in ("eye level", "placement", "move to")):
-        candidates = sorted(stock_items, key=lambda item: item[1], reverse=True)[:2]
-        names = ", ".join(obj.label for obj, _ in candidates) or "the fastest-moving products"
+        candidates = sorted(inventory, key=lambda item: item["margin_percent"] * item["daily_sales"], reverse=True)[:2]
+        names = ", ".join(item["name"] for item in candidates) or "the fastest-moving products"
         return AskResult(
             reply=f"Place {names} at eye level near the entrance or counter for visibility.",
-            highlight_ids=[obj.id for obj, _ in candidates],
+            highlight_ids=[item["shelf_id"] for item in candidates],
         )
     if "rice" in q:
         return AskResult(
@@ -158,3 +169,7 @@ def _stock_count(obj: SceneObject) -> int | None:
     if obj.label.lower() == "soap pack":
         return 5
     return None
+
+
+def _object_by_id(graph: SceneGraph, object_id: str) -> SceneObject | None:
+    return next((obj for obj in graph.objects if obj.id == object_id), None)

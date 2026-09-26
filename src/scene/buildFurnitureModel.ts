@@ -1,4 +1,4 @@
-import { BoxGeometry, ConeGeometry, CylinderGeometry, Group, Mesh, SphereGeometry, type BufferGeometry, type MeshStandardMaterial } from 'three'
+import { BoxGeometry, ConeGeometry, CylinderGeometry, Group, Mesh, SphereGeometry, type BufferGeometry, type MeshStandardMaterial, type Texture } from 'three'
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js'
 import { shapeFor } from './appearance'
 import { makeSurface, surfaceTexture } from './modelMaterials'
@@ -7,7 +7,7 @@ import { PROCEDURAL_CHAIR_SEAT, STANDARD_CHAIR_SEAT, PROCEDURAL_SOFA, procedural
 import { usesDemoFurniture } from '../assets/catalog'
 
 /** Models use a unit bounding volume, so every style retains the measured footprint. */
-export function buildFurnitureModel(object: SceneObject) {
+export function buildFurnitureModel(object: SceneObject, productTexture?: Texture) {
   const root = new Group()
   const body = new Group()
   root.add(body)
@@ -178,12 +178,13 @@ export function buildFurnitureModel(object: SceneObject) {
     const product = surface(object.color ?? '#d8b46a', 'plastic')
     const detail = surface('#f5ead2', 'plastic')
     const darkDetail = surface('#263238', 'plastic')
+    const photo = productTexture ? makeSurface('#ffffff', 'plastic', productTexture) : detail
 
     if (label.includes('oil bottle')) {
       cylinder(0.29, 0.66, [0, -0.1, 0], product)
       cylinder(0.22, 0.12, [0, 0.27, 0], product)
       cylinder(0.14, 0.1, [0, 0.38, 0], darkDetail)
-      box([0.42, 0.24, 0.025], [0, -0.06, 0.29], detail, 0.012)
+      box([0.42, 0.24, 0.025], [0, -0.06, 0.29], photo, 0.012)
       box([0.18, 0.035, 0.008], [0, -0.06, 0.307], product, 0.003)
       box([0.09, 0.04, 0.02], [0, 0.43, 0], darkDetail, 0.004)
     } else if (label.includes('rice bag')) {
@@ -194,13 +195,13 @@ export function buildFurnitureModel(object: SceneObject) {
       sackTop.castShadow = sackTop.receiveShadow = true
       body.add(sackTop)
       geometries.push(sackTop.geometry)
-      box([0.68, 0.23, 0.025], [0, -0.04, 0.365], detail, 0.012)
+      box([0.68, 0.23, 0.025], [0, -0.04, 0.365], photo, 0.012)
       box([0.32, 0.04, 0.012], [0, -0.04, 0.382], darkDetail, 0.004)
       box([0.62, 0.04, 0.012], [0, -0.34, 0.365], detail, 0.004)
     } else {
       box([0.78, 0.84, 0.22], [0, -0.02, 0], product, 0.04)
       box([0.72, 0.05, 0.24], [0, 0.42, 0], product, 0.012)
-      box([0.62, 0.24, 0.02], [0, 0.06, 0.125], detail, 0.008)
+      box([0.62, 0.24, 0.02], [0, 0.06, 0.125], photo, 0.008)
       box([0.42, 0.035, 0.01], [0, 0.06, 0.138], darkDetail, 0.003)
       box([0.68, 0.035, 0.02], [0, -0.3, 0.125], detail, 0.004)
       if (label.includes('soap pack')) {

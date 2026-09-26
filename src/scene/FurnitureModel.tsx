@@ -1,12 +1,13 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { Color } from 'three'
+import { Color, TextureLoader, type Texture } from 'three'
 import { buildFurnitureModel } from './buildFurnitureModel'
 import { revealAmount, type RevealWindow } from './scanReveal'
 import type { ScanAnim } from './scanAnim'
 import type { SceneObject } from './types'
 import { CatalogFurniture } from './CatalogFurniture'
 import { applyObjectPower } from './furnitureEffects'
+import { productAssetForLabel } from './productAssets'
 
 const ACCENT = new Color('#3ee0c2')
 
@@ -28,11 +29,22 @@ export function FurnitureModel(props: FurnitureModelProps) {
 
 function ProceduralFurniture({ object, anim, materialise, highlighted, draggable, powered = false }: FurnitureModelProps) {
   const [width, height, depth] = object.size
+  const [productTexture, setProductTexture] = useState<Texture>()
+  const productImage = productAssetForLabel(object.label)?.image
+  useEffect(() => {
+    if (!productImage) return
+    let active = true
+    const loader = new TextureLoader()
+    loader.load(productImage, (texture) => {
+      if (active) setProductTexture(texture)
+      else texture.dispose()
+    }, undefined, () => undefined)
+    return () => { active = false }
+  }, [productImage])
   const model = useMemo(() => buildFurnitureModel({
     ...object, size: [width, height, depth],
     // Position does not affect local geometry; dragging must not rebuild textures.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }), [object.id, object.type, object.color, object.material, object.shape, Boolean(object.rotation), width, height, depth])
+  }, productTexture), [object.id, object.type, object.color, object.material, object.shape, Boolean(object.rotation), width, height, depth, productTexture])
   useEffect(() => () => model.dispose(), [model])
   useFrame(() => {
     const solid = revealAmount(anim.twin, materialise)

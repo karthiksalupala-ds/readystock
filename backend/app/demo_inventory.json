@@ -1,0 +1,50 @@
+[
+  {
+    "product_id": "rice-5kg",
+    "name": "Rice 5kg",
+    "category": "Staples",
+    "current_stock": 3,
+    "daily_sales": 8,
+    "reorder_point": 12,
+    "reorder_quantity": 20,
+    "margin_percent": 8,
+    "supplier": "Local Wholesale",
+    "shelf_id": "rice-shelf"
+  },
+  {
+    "product_id": "cooking-oil-1l",
+    "name": "Cooking Oil 1L",
+    "category": "Staples",
+    "current_stock": 18,
+    "daily_sales": 5,
+    "reorder_point": 10,
+    "reorder_quantity": 24,
+    "margin_percent": 15,
+    "supplier": "Metro Distributors",
+    "shelf_id": "oil-shelf"
+  },
+  {
+    "product_id": "toor-dal-1kg",
+    "name": "Toor Dal 1kg",
+    "category": "Staples",
+    "current_stock": 6,
+    "daily_sales": 3,
+    "reorder_point": 8,
+    "reorder_quantity": 12,
+    "margin_percent": 12,
+    "supplier": "Local Wholesale",
+    "shelf_id": "dal-shelf"
+  },
+  {
+    "product_id": "soap-pack",
+    "name": "Soap Pack",
+    "category": "Personal Care",
+    "current_stock": 5,
+    "daily_sales": 2,
+    "reorder_point": 6,
+    "reorder_quantity": 12,
+    "margin_percent": 22,
+    "supplier": "Fresh Suppliers",
+    "shelf_id": "soap-shelf"
+  }
+]
