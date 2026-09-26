@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { askScene, ingestScene, reconstructScene } from './scene'
+import { analyzeShelf, askScene, advisePlacement, ingestScene, reconstructScene } from './scene'
 import { sampleGraph } from '../test/sampleGraph'
 
 afterEach(() => {
@@ -52,5 +52,23 @@ describe('scene API client', () => {
   it('throws when the backend returns an error', async () => {
     mockFetch('nope', false, 500)
     await expect(ingestScene()).rejects.toThrow(/nope/)
+  })
+
+  it('posts placement advice and multipart shelf scans', async () => {
+    const fetchMock = mockFetch({ recommendations: [{ title: 'Move rice to eye level' }] })
+    await advisePlacement(sampleGraph, 'shelf-1')
+    expect(fetchMock).toHaveBeenCalledWith('/advisor/placement', expect.objectContaining({
+      body: JSON.stringify({ graph: sampleGraph }),
+    }))
+
+    const image = new File(['image'], 'shelf.jpg', { type: 'image/jpeg' })
+    const scanFetch = mockFetch({ detections: [{ name: 'Rice bag', quantity: 4, dominantColor: '#fff' }] })
+    await expect(analyzeShelf(image)).resolves.toEqual({
+      detections: [{ id: undefined, label: 'Rice bag', count: 4, color: '#fff' }],
+    })
+    expect(scanFetch).toHaveBeenCalledWith('/vision/analyze-shelf', expect.objectContaining({
+      method: 'POST',
+      body: expect.any(FormData),
+    }))
   })
 })

@@ -23,6 +23,8 @@ export type SceneObject = {
   confidence?: number | null
   color?: string | null
   shape?: string | null
+  /** Inventory quantity reported by a shelf scan, when applicable. */
+  count?: number | null
   /** Catalog model id from models/manifest.json; absent on captured/procedural objects. */
   assetId?: string | null
 }
@@ -46,4 +48,26 @@ export type ReconstructResult = {
 export type AskResult = {
   reply: string
   highlightIds: string[]
+}
+
+export type PlacementRecommendation = {
+  id?: string
+  title?: string
+  location?: string
+  reason?: string
+  objectId?: string
+  position?: Vec3
+}
+
+export type PlacementResult = {
+  recommendations: PlacementRecommendation[]
+}
+
+export type ShelfDetection = {
+  id?: string
+  label: string
+  count?: number | null
+  color?: string | null
+  box?: { x: number; y: number; width: number; height: number }
+  confidence?: number
 }

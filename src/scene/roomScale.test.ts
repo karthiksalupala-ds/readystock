@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { LABEL_BUDGET, ceilingLights, isMeasured, isSpacious, needsFraming, shadowExtent, showsLabel } from './roomScale'
+import { LABEL_BUDGET, ceilingLights, isMeasured, isShelfProduct, isSpacious, needsFraming, shadowExtent, showsLabel } from './roomScale'
 import { SIMULATED_ROOM } from './simulatedCapture'
 import { sampleGraph } from '../test/sampleGraph'
 import type { SceneRoom } from './types'
@@ -33,6 +33,11 @@ describe('scaling the viewer to the room', () => {
     expect(showsLabel({ total: LABEL_BUDGET, highlighted: false })).toBe(true)
     expect(showsLabel({ total: 106, highlighted: false })).toBe(false)
     expect(showsLabel({ total: 106, highlighted: true })).toBe(true)
+  })
+
+  it('recognizes grocery units as answer-only labels', () => {
+    expect(isShelfProduct({ type: 'box', label: 'Rice Bag', id: 'rice', category: 'furniture', position: [0, 0, 0], size: [1, 1, 1] })).toBe(true)
+    expect(isShelfProduct({ type: 'shelf', label: 'Rice shelf', id: 'shelf', category: 'furniture', position: [0, 0, 0], size: [1, 1, 1] })).toBe(false)
   })
 
   it('covers the whole floor with the shadow camera', () => {

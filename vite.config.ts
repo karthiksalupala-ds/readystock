@@ -8,8 +8,8 @@ export default defineConfig({
     port: 5173,
     host: true,
     proxy: {
-      '/scene': 'http://127.0.0.1:8000',
-      '/health': 'http://127.0.0.1:8000',
+      '/scene': process.env.INTELIDAR_API_URL ?? 'http://127.0.0.1:8000',
+      '/health': process.env.INTELIDAR_API_URL ?? 'http://127.0.0.1:8000',
     },
   },
   test: {

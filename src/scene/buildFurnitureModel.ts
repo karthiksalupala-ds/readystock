@@ -1,4 +1,4 @@
-import { BoxGeometry, CylinderGeometry, Group, Mesh, SphereGeometry, type BufferGeometry, type MeshStandardMaterial } from 'three'
+import { BoxGeometry, ConeGeometry, CylinderGeometry, Group, Mesh, SphereGeometry, type BufferGeometry, type MeshStandardMaterial } from 'three'
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js'
 import { shapeFor } from './appearance'
 import { makeSurface, surfaceTexture } from './modelMaterials'
@@ -171,6 +171,41 @@ export function buildFurnitureModel(object: SceneObject) {
       if (shape === 'divided') {
         box([0.025, 0.94, 0.6], [0, 0, 0], chrome)
         box([0.88, 0.02, 0.6], [0, 0.02, 0], chrome)
+      }
+    }
+  } else if (object.type === 'box' && /rice bag|oil bottle|dal packet|soap pack/i.test(object.label)) {
+    const label = object.label.toLowerCase()
+    const product = surface(object.color ?? '#d8b46a', 'plastic')
+    const detail = surface('#f5ead2', 'plastic')
+    const darkDetail = surface('#263238', 'plastic')
+
+    if (label.includes('oil bottle')) {
+      cylinder(0.29, 0.66, [0, -0.1, 0], product)
+      cylinder(0.22, 0.12, [0, 0.27, 0], product)
+      cylinder(0.14, 0.1, [0, 0.38, 0], darkDetail)
+      box([0.42, 0.24, 0.025], [0, -0.06, 0.29], detail, 0.012)
+      box([0.18, 0.035, 0.008], [0, -0.06, 0.307], product, 0.003)
+      box([0.09, 0.04, 0.02], [0, 0.43, 0], darkDetail, 0.004)
+    } else if (label.includes('rice bag')) {
+      box([0.78, 0.66, 0.72], [0, -0.1, 0], product, 0.08)
+      const sackTop = new Mesh(new ConeGeometry(0.39, 0.18, 4), product)
+      sackTop.position.set(0, 0.32, 0)
+      sackTop.rotation.y = Math.PI / 4
+      sackTop.castShadow = sackTop.receiveShadow = true
+      body.add(sackTop)
+      geometries.push(sackTop.geometry)
+      box([0.68, 0.23, 0.025], [0, -0.04, 0.365], detail, 0.012)
+      box([0.32, 0.04, 0.012], [0, -0.04, 0.382], darkDetail, 0.004)
+      box([0.62, 0.04, 0.012], [0, -0.34, 0.365], detail, 0.004)
+    } else {
+      box([0.78, 0.84, 0.22], [0, -0.02, 0], product, 0.04)
+      box([0.72, 0.05, 0.24], [0, 0.42, 0], product, 0.012)
+      box([0.62, 0.24, 0.02], [0, 0.06, 0.125], detail, 0.008)
+      box([0.42, 0.035, 0.01], [0, 0.06, 0.138], darkDetail, 0.003)
+      box([0.68, 0.035, 0.02], [0, -0.3, 0.125], detail, 0.004)
+      if (label.includes('soap pack')) {
+        box([0.035, 0.62, 0.012], [-0.25, -0.02, 0.125], darkDetail, 0.002)
+        box([0.035, 0.62, 0.012], [0.25, -0.02, 0.125], darkDetail, 0.002)
       }
     }
   } else box([1, 1, 1], [0, 0, 0], primary, shape === 'rectangular' ? 0 : 0.04)

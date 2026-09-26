@@ -70,8 +70,44 @@ def test_cors_allows_vite_origin() -> None:
     assert response.headers.get("access-control-allow-origin") == "http://localhost:5173"
 
 
-def test_placeholder_openai_key_uses_heuristic(monkeypatch) -> None:  # type: ignore[no-untyped-def]
+def test_offline_provider_defaults_to_local_ollama(monkeypatch) -> None:  # type: ignore[no-untyped-def]
+    monkeypatch.delenv("LLM_PROVIDER", raising=False)
+    monkeypatch.delenv("OLLAMA_BASE_URL", raising=False)
+    from app.services.reasoner import OllamaReasoner, build_reasoner
+
+    assert isinstance(build_reasoner(), OllamaReasoner)
+
+
+def test_heuristic_provider_is_explicit_offline_fallback(monkeypatch) -> None:  # type: ignore[no-untyped-def]
+    monkeypatch.setenv("LLM_PROVIDER", "heuristic")
     monkeypatch.setenv("OPENAI_API_KEY", "sk-your-openai-api-key")
     from app.services.reasoner import HeuristicReasoner, build_reasoner
 
     assert isinstance(build_reasoner(), HeuristicReasoner)
+
+
+def test_placement_advisor_is_response_only_and_returns_shelf_targets() -> None:
+    client = TestClient(create_app())
+    graph = client.post("/scene/ingest", json={}).json()
+    graph = client.post("/scene/reconstruct", json={"graph": graph}).json()["graph"]
+    response = client.post(
+        "/advisor/placement",
+        json={"graph": graph, "item": "Rice Bags", "quantity": 4},
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["recommendations"]
+    assert payload["recommendations"][0]["objectId"] == "rice-shelf"
+    assert "recommendations" not in graph
+
+
+def test_mock_shelf_vision_accepts_multipart_without_image_dependencies() -> None:
+    client = TestClient(create_app())
+    response = client.post(
+        "/vision/analyze-shelf",
+        files={"image": ("shelf.jpg", b"not-an-image", "image/jpeg")},
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["mode"] == "mock"
+    assert len(payload["detections"]) == 3

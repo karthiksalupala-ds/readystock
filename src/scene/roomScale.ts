@@ -8,7 +8,7 @@
  * buries the room in HTML. These are the rules that scale with the room, kept
  * here so they can be tested without a canvas.
  */
-import type { SceneGraph, SceneRoom } from './types'
+import type { SceneGraph, SceneObject, SceneRoom } from './types'
 
 /** Labels stay readable up to this many objects; past it they overlap into noise. */
 export const LABEL_BUDGET = 24
@@ -46,6 +46,11 @@ export function needsFraming(graph: SceneGraph | null): boolean {
  */
 export function showsLabel({ total, highlighted }: { total: number; highlighted: boolean }): boolean {
   return highlighted || total <= LABEL_BUDGET
+}
+
+/** Individual grocery units stay quiet until the spatial assistant identifies them. */
+export function isShelfProduct(object: SceneObject): boolean {
+  return object.type === 'box' && /rice bag|oil bottle|dal packet|soap pack/i.test(object.label)
 }
 
 /** Half-extent the shadow camera must cover to catch the whole floor. */

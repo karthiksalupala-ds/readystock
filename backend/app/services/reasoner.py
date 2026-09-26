@@ -65,10 +65,69 @@ class OpenAIReasoner(Reasoner):
             return heuristic_ask(graph, question)
 
 
+class OllamaReasoner(Reasoner):
+    def __init__(self, base_url: str = "http://localhost:11434", model: str = "qwen2.5:1.5b") -> None:
+        self.base_url = base_url.rstrip("/")
+        self.model = model
+
+    def ask(self, graph: SceneGraph, question: str) -> AskResult:
+        try:
+            import httpx
+
+            response = httpx.post(
+                f"{self.base_url}/api/generate",
+                json={
+                    "model": self.model,
+                    "stream": False,
+                    "prompt": build_prompt(graph, question),
+                    "format": "json",
+                },
+                timeout=30,
+            )
+            response.raise_for_status()
+            data = json.loads(response.json().get("response", "{}"))
+            ids = data.get("highlightIds", data.get("highlight_ids", []))
+            return AskResult(reply=str(data.get("reply", "")), highlight_ids=[str(item) for item in ids] if isinstance(ids, list) else [])
+        except Exception:
+            from app.services.ask import heuristic_ask
+
+            return heuristic_ask(graph, question)
+
+
+def build_prompt(graph: SceneGraph, question: str) -> str:
+    return (
+        "You are ReadyStock AI, an offline grocery-store spatial assistant. "
+        "Answer only from the supplied scene graph. Return valid JSON with exactly "
+        'two fields: "reply" (short natural-language answer) and "highlightIds" '
+        "(an array containing only matching object ids). "
+        f"Question: {question}\n"
+        f"Scene graph: {json.dumps(graph.model_dump(by_alias=True))}"
+    )
+
+
 def build_reasoner() -> Reasoner:
+    provider = os.getenv("LLM_PROVIDER", "ollama").strip().lower()
+    if provider == "heuristic":
+        return HeuristicReasoner()
+    if provider == "ollama":
+        return OllamaReasoner(
+            base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434").strip() or "http://localhost:11434",
+            model=os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b").strip() or "qwen2.5:1.5b",
+        )
+    if provider not in {"cloud", "openai", "groq"}:
+        return HeuristicReasoner()
+
     key = os.getenv("OPENAI_API_KEY", "").strip()
-    model = os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip() or "gpt-4o-mini"
-    base_url = os.getenv("OPENAI_BASE_URL", "").strip() or None
-    if key.startswith("sk-") and "your-openai-api-key" not in key:
+    if provider == "groq" or (provider == "cloud" and not key and os.getenv("GROQ_API_KEY", "").strip()):
+        provider = "groq"
+        key = os.getenv("GROQ_API_KEY", "").strip()
+    model = os.getenv("LLM_MODEL", os.getenv("OPENAI_MODEL", "gpt-4o-mini")).strip() or "gpt-4o-mini"
+    base_url = os.getenv("LLM_BASE_URL", os.getenv("OPENAI_BASE_URL", "")).strip() or None
+    if provider == "groq":
+        base_url = base_url or "https://api.groq.com/openai/v1"
+        model = os.getenv("LLM_MODEL", "llama-3.1-8b-instant").strip() or "llama-3.1-8b-instant"
+    if provider in {"cloud", "openai"} and key.startswith("sk-") and "your-openai-api-key" not in key:
+        return OpenAIReasoner(api_key=key, model=model, base_url=base_url)
+    if provider == "groq" and key:
         return OpenAIReasoner(api_key=key, model=model, base_url=base_url)
     return HeuristicReasoner()

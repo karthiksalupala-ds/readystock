@@ -1,7 +1,7 @@
 import { Canvas, useThree } from '@react-three/fiber'
 import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { Vector3 } from 'three'
-import { askScene, ingestScene, reconstructScene } from './api/scene'
+import { analyzeShelf, askScene, advisePlacement, ingestScene, reconstructScene } from './api/scene'
 import { Hud } from './components/Hud'
 import { ImportedRoomHud, ImportSetupHud, PlayHud, RoomActions } from './components/ExperienceHud'
 import { ImportedRoomView } from './experience/ImportedRoomView'
@@ -18,6 +18,8 @@ import { AppearanceEditor } from './components/AppearanceEditor'
 import { RenovationPanel } from './components/RenovationPanel'
 import { addFurniture, removeFurniture, rotateFurniture, undoRenovation, type RenovationResult, type RenovationUndo } from './scene/renovation'
 import { moveObject, updateAppearance } from './scene/editScene'
+
+type ChatMessage = { role: 'user' | 'assistant'; text: string }
 import { useScanProgress } from './scene/useScanProgress'
 import { ViewerScene } from './scene/ViewerScene'
 import { SCAN_DURATION_MS } from './scene/scanReveal'
@@ -25,6 +27,8 @@ import { isMeasured } from './scene/roomScale'
 import { dprFor } from './settings/graphics'
 import { useGraphics } from './settings/useGraphics'
 import type { AnalysisStep, SceneGraph, SceneMode, Vec3 } from './scene/types'
+import type { PlacementResult, ShelfDetection } from './scene/types'
+import { applyShelfDetections } from './scene/shelfScan'
 
 declare global {
   interface Window {
@@ -58,6 +62,8 @@ export default function App() {
   const [visibleStepCount, setVisibleStepCount] = useState(0)
   const [query, setQuery] = useState('')
   const [reply, setReply] = useState<string | null>(null)
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([])
+  const [chatLoading, setChatLoading] = useState(false)
   const [highlightedIds, setHighlightedIds] = useState<string[]>([])
   const [error, setError] = useState<string | null>(null)
   const [editing, setEditing] = useState(false)
@@ -79,6 +85,10 @@ export default function App() {
   const [renovating, setRenovating] = useState(false)
   const [renovationHistory, setRenovationHistory] = useState<RenovationUndo[]>([])
   const [renovationMessage, setRenovationMessage] = useState<string | null>(null)
+  const [placement, setPlacement] = useState<PlacementResult | null>(null)
+  const [placementLoading, setPlacementLoading] = useState(false)
+  const [shelfDetections, setShelfDetections] = useState<ShelfDetection[]>([])
+  const [shelfScanning, setShelfScanning] = useState(false)
   const imported = useRef(false)
   const sceneVersion = useRef(0)
 
@@ -240,6 +250,35 @@ export default function App() {
     )
   }
 
+  async function onPlacement() {
+    if (mode !== 'twin' || !twinGraph) return
+    setPlacementLoading(true)
+    try {
+      setPlacement(await advisePlacement(twinGraph, highlightedIds[0]))
+      setError(null)
+    } catch {
+      setError('Placement advice failed. Is the backend running?')
+    } finally {
+      setPlacementLoading(false)
+    }
+  }
+
+  async function onShelfScan(file: File) {
+    if (mode !== 'twin' || !twinGraph) return
+    setShelfScanning(true)
+    try {
+      const result = await analyzeShelf(file)
+      setShelfDetections(result.detections)
+      setTwinGraph(current => current ? applyShelfDetections(current, result.detections) : current)
+      setHighlightedIds(result.detections.map(item => item.id).filter((id): id is string => Boolean(id)))
+      setError(null)
+    } catch {
+      setError('Shelf scan failed. Is the vision service running?')
+    } finally {
+      setShelfScanning(false)
+    }
+  }
+
   function onImportCapture(scene: SceneGraph) {
     // A measured scan is already understood, so it opens as a twin. A simulated one
     // arrives as raw geometry and earns its labels from AI Reconstruct, like the demo.
@@ -312,15 +351,21 @@ export default function App() {
     const scene = twinGraph
     if (mode !== 'twin' || !scene || question.trim().length === 0) return
     setQuery(question)
+    setChatMessages((messages) => [...messages, { role: 'user', text: question.trim() }])
+    setChatLoading(true)
     try {
       const result = await askScene(scene, question)
       if (version !== sceneVersion.current) return
       setReply(result.reply)
+      setChatMessages((messages) => [...messages, { role: 'assistant', text: result.reply }])
       setHighlightedIds(result.highlightIds)
       setError(null)
     } catch {
       if (version !== sceneVersion.current) return
       setError('Ask failed. Is the backend running?')
+      setChatMessages((messages) => [...messages, { role: 'assistant', text: 'I could not reach the shop assistant. Please check that the backend is running.' }])
+    } finally {
+      setChatLoading(false)
     }
   }
 
@@ -407,6 +452,9 @@ export default function App() {
         settings={settings}
         query={query}
         reply={reply}
+        chatMessages={chatMessages}
+        chatLoading={chatLoading}
+        onClearChat={() => { setChatMessages([]); setReply(null) }}
         error={error}
         editing={editing}
         highlightedIds={highlightedIds}
@@ -425,6 +473,12 @@ export default function App() {
         onSelectObject={onSelectObject}
         onSettingsChange={setSettings}
         onImportCapture={onImportCapture}
+        onPlacement={onPlacement}
+        placement={placement}
+        placementLoading={placementLoading}
+        onShelfScan={onShelfScan}
+        shelfDetections={shelfDetections}
+        shelfScanning={shelfScanning}
         renovating={renovating}
         onToggleRenovation={() => { setRenovating((current) => !current); setEditing(true) }}
       />}

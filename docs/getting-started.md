@@ -36,9 +36,21 @@ Copy [`.env.example`](../.env.example) to `.env` at the **repo root**. The API a
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `OPENAI_API_KEY` | No | If it starts with `sk-` and is not the placeholder, ask uses OpenAI. Otherwise heuristics. |
-| `OPENAI_MODEL` | No | Chat model. Default `gpt-4o-mini`. |
-| `OPENAI_BASE_URL` | No | Compatible OpenAI base URL. Leave unset for api.openai.com. |
+| `LLM_PROVIDER` | No | `ollama` (default, offline), `cloud`, `groq`, or `heuristic`. |
+| `OLLAMA_BASE_URL` | No | Ollama URL. Default `http://localhost:11434`. |
+| `OLLAMA_MODEL` | No | Local model. Default `qwen2.5:1.5b`. |
+| `OPENAI_API_KEY` | No | Used only when `LLM_PROVIDER=cloud` and the key is real. |
+| `GROQ_API_KEY` | No | Used only when `LLM_PROVIDER=groq`. |
+
+For the offline demo, install Ollama separately and download the model once:
+
+```bash
+ollama pull qwen2.5:1.5b
+```
+
+The repository does not contain model weights. When Ollama is stopped, the API
+automatically falls back to the existing keyword heuristic, so the demo still
+works with zero connectivity.
 
 **Do not** prefix these with `VITE_`. Vite would embed them in the browser bundle. The key belongs on the server.
 

@@ -86,3 +86,34 @@ class AskRequest(ApiModel):
 class AskResult(ApiModel):
     reply: str
     highlight_ids: list[str]
+
+
+class PlacementRequest(ApiModel):
+    graph: SceneGraph
+    item: str | None = None
+    quantity: int | None = Field(default=None, ge=1)
+
+
+class PlacementRecommendation(ApiModel):
+    object_id: str | None = None
+    location: str
+    reason: str
+    score: float = Field(ge=0, le=1)
+
+
+class PlacementResult(ApiModel):
+    summary: str
+    recommendations: list[PlacementRecommendation]
+    highlight_ids: list[str] = Field(default_factory=list)
+
+
+class VisionDetection(ApiModel):
+    label: str
+    confidence: float = Field(ge=0, le=1)
+    box: tuple[float, float, float, float]
+
+
+class VisionResult(ApiModel):
+    mode: str = "mock"
+    filename: str | None = None
+    detections: list[VisionDetection]

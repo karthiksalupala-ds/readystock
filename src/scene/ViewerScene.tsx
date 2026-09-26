@@ -16,7 +16,7 @@ import {
 } from 'three'
 import { canDragObject } from './editScene'
 import { preloadCatalogModels } from './catalogModel'
-import { ceilingLights, isMeasured, needsFraming, shadowExtent, showsLabel } from './roomScale'
+import { ceilingLights, isMeasured, isShelfProduct, needsFraming, shadowExtent, showsLabel } from './roomScale'
 import { usesDemoFurniture } from '../assets/catalog'
 import { fitFurniture, updateFurnitureMaterials } from '../assets/furniture'
 import { useFurniture } from '../assets/useFurniture'
@@ -237,7 +237,11 @@ export function ViewerScene({
             highlighted={highlightedIds.includes(object.id)}
             targeted={gameplayActive && interactionTargetId === object.id}
             powered={Boolean(toggles[object.id])}
-            labelled={!gameplayActive && showsLabel({ total: objects.length, highlighted: highlightedIds.includes(object.id) })}
+            labelled={!gameplayActive && (
+              isShelfProduct(object)
+                ? highlightedIds.includes(object.id)
+                : showsLabel({ total: objects.length, highlighted: highlightedIds.includes(object.id) })
+            )}
             editing={editing && !gameplayActive}
             gameplayActive={gameplayActive}
             onAssetReady={onAssetReady}

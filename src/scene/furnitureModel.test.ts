@@ -42,6 +42,28 @@ describe('detailed furniture', () => {
       model.dispose()
     }
   })
+
+  it('builds recognizable grocery products inside their measured shelf slots', () => {
+    for (const label of ['Rice Bag', 'Oil Bottle', 'Dal Packet', 'Soap Pack']) {
+      const object: SceneObject = {
+        id: label,
+        type: 'box',
+        label,
+        category: 'furniture',
+        position: [0, 1.45, 0],
+        size: [0.15, 0.2, 0.15],
+        color: '#ef4444',
+      }
+      const model = buildFurnitureModel(object)
+      const bounds = new Box3().setFromObject(model.root).getSize(new Vector3())
+      expect(model.root.children[0].children.length).toBeGreaterThanOrEqual(3)
+      expect(bounds.x).toBeLessThanOrEqual(object.size[0] * 1.2)
+      expect(bounds.y).toBeLessThanOrEqual(object.size[1] * 1.2)
+      expect(bounds.z).toBeLessThanOrEqual(object.size[2] * 1.2)
+      model.dispose()
+    }
+  })
+
   for (const [type, shapes] of Object.entries(SHAPES)) for (const shape of shapes) {
     it(`${type}/${shape} retains the measured bounding volume`, () => {
       const object: SceneObject = { id: 'test', type, shape, label: type, category: 'furniture', position: [0, 0, 0], size: [2, 1, 0.7], color: '#b96348' }

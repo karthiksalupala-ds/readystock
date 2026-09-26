@@ -1,5 +1,5 @@
-import type { FormEvent, ReactNode } from 'react'
-import type { AnalysisStep, SceneGraph, SceneMode, SceneObject } from '../scene/types'
+import { useEffect, useState, type FormEvent, type ReactNode } from 'react'
+import type { AnalysisStep, PlacementResult, SceneGraph, SceneMode, SceneObject, ShelfDetection } from '../scene/types'
 import { capturedPoints, revealedObjects } from '../scene/scanReveal'
 import type { GraphicsSettings } from '../settings/graphics'
 import { GraphicsMenu } from './GraphicsMenu'
@@ -16,6 +16,8 @@ type HudProps = {
   scanProgress: number
   query: string
   reply: string | null
+  chatMessages?: { role: 'user' | 'assistant'; text: string }[]
+  chatLoading?: boolean
   error: string | null
   editing: boolean
   highlightedIds: string[]
@@ -26,6 +28,7 @@ type HudProps = {
   onQueryChange: (value: string) => void
   onAsk: (event: FormEvent) => void
   onAskSuggestion: (value: string) => void
+  onClearChat?: () => void
   onReconstruct: () => void
   onSkipScan: () => void
   onSelectObject: (id: string) => void
@@ -33,11 +36,21 @@ type HudProps = {
   onImportCapture?: (graph: SceneGraph) => void
   renovating?: boolean
   onToggleRenovation?: () => void
+  onPlacement?: () => void
+  placement?: PlacementResult | null
+  placementLoading?: boolean
+  onShelfScan?: (file: File) => void
+  shelfDetections?: ShelfDetection[]
+  shelfScanning?: boolean
 }
 
 const SUGGESTIONS = [
+  'Which product sells the most?',
+  'Which product sells the least?',
   'Which items are critical stock?',
-  'Where is the rice shelf?',
+  'Show me all the chairs.',
+  'Make a restock plan for today.',
+  'What should move to eye level?',
   'Show me low stock items',
 ]
 
@@ -67,6 +80,8 @@ export function Hud({
   scanProgress,
   query,
   reply,
+  chatMessages = [],
+  chatLoading = false,
   error,
   editing,
   highlightedIds,
@@ -77,6 +92,7 @@ export function Hud({
   onQueryChange,
   onAsk,
   onAskSuggestion,
+  onClearChat = () => undefined,
   onReconstruct,
   onSkipScan,
   onSelectObject,
@@ -84,9 +100,17 @@ export function Hud({
   onImportCapture,
   renovating,
   onToggleRenovation,
+  onPlacement,
+  placement,
+  placementLoading = false,
+  onShelfScan,
+  shelfDetections = [],
+  shelfScanning = false,
 }: HudProps) {
   const specular = useSpecular()
+  const [chatOpen, setChatOpen] = useState(true)
   const reconstructed = mode === 'twin'
+  const askReady = reconstructed
   const scanning = mode === 'raw' && graph !== null && scanProgress < 1
   const room = graph?.room
   const objects = graph?.objects ?? []
@@ -114,6 +138,7 @@ export function Hud({
           {onImportCapture && <CaptureImport onImport={onImportCapture} disabled={mode === 'analysing'} />}
           <ExportPanel graph={graph} disabled={mode === 'analysing'} />
           {onToggleRenovation && <button type="button" className={`chip ${renovating ? 'on' : ''}`} aria-pressed={Boolean(renovating)} disabled={!reconstructed} onClick={onToggleRenovation}>Renovate</button>}
+          {onPlacement && <button type="button" className="chip" disabled={!reconstructed || placementLoading} onClick={onPlacement}>{placementLoading ? 'Advising…' : 'Placement Advisor'}</button>}
           <button
             type="button"
             className={`chip edit-toggle ${editing ? 'on' : ''}`}
@@ -176,6 +201,27 @@ export function Hud({
         </ul>
       </aside>
 
+      {reconstructed && onShelfScan && (
+        <ShelfScanner onScan={onShelfScan} detections={shelfDetections} scanning={shelfScanning} />
+      )}
+
+      {reconstructed && placement && (
+        <aside className="panel panel-right glass">
+          <p className="panel-kicker">Spatial advisor</p>
+          <h2>Placement</h2>
+          {placement.recommendations.length === 0 ? <p className="muted">No placement changes recommended.</p> : (
+            <ul className="advisor-list">
+              {placement.recommendations.map((recommendation, index) => (
+                <li key={recommendation.id ?? `${recommendation.title}-${index}`}>
+                  <strong>{recommendation.title || recommendation.location || 'Suggested placement'}</strong>
+                  {recommendation.reason && <span>{recommendation.reason}</span>}
+                </li>
+              ))}
+            </ul>
+          )}
+        </aside>
+      )}
+
       {mode !== 'twin' && (
         <div className="stage">
           {scanning && (
@@ -212,7 +258,35 @@ export function Hud({
         </div>
       )}
 
-      <form className="ask glass" onSubmit={onAsk} {...specular}>
+      <button
+        type="button"
+        className={`chat-launcher ${chatOpen ? 'active' : ''}`}
+        aria-label={chatOpen ? 'Close stock chat' : 'Open stock chat'}
+        aria-expanded={chatOpen}
+        onClick={() => setChatOpen((open) => !open)}
+      >
+        <span className="chat-launcher-icon" aria-hidden="true">✦</span>
+        <span className="chat-launcher-label">AI Chat</span>
+      </button>
+
+      {chatOpen && <form className="ask chat-panel glass" onSubmit={onAsk} {...specular}>
+        <div className="chat-heading">
+          <div>
+            <p className="panel-kicker">Offline AI copilot</p>
+            <h2>Stock chat</h2>
+          </div>
+          <span className="chat-status"><span className="status-dot" /> Local</span>
+        </div>
+        <p className="chat-intro">Ask about sales, stock, placement, or a plan for the store.</p>
+        <div className="chat-toolbar">
+          <span>{chatMessages.length ? `${chatMessages.length} messages` : 'New conversation'}</span>
+          {chatMessages.length > 0 && <button type="button" onClick={onClearChat}>Clear</button>}
+        </div>
+        {!askReady && mode !== 'analysing' && (
+          <button type="button" className="chat-reconstruct" disabled={!graph} onClick={onReconstruct}>
+            ✨ Reconstruct scene to enable chat
+          </button>
+        )}
         <label htmlFor="ask-input">Ask the spatial assistant</label>
         <div className="ask-row">
           <input
@@ -220,16 +294,25 @@ export function Hud({
             value={query}
             onChange={(event) => onQueryChange(event.target.value)}
             placeholder={
-              reconstructed ? 'Show me all the chairs.' : 'Reconstruct the scene to ask questions'
+              askReady ? 'Which stock sells the most?' : 'Preparing the scene for questions…'
             }
-            disabled={!reconstructed}
+            disabled={!askReady}
             autoComplete="off"
           />
-          <button type="submit" disabled={!reconstructed || query.trim().length === 0}>
-            Ask
+          <button type="submit" disabled={!askReady || query.trim().length === 0}>
+            {chatLoading ? '…' : 'Send'}
           </button>
         </div>
-        {reconstructed && (
+        <div className="chat-messages" aria-live="polite">
+          {chatMessages.map((message, index) => (
+            <div key={`${message.role}-${index}`} className={`chat-message ${message.role}`}>
+              <span className="chat-message-role">{message.role === 'user' ? 'You' : 'ReadyStock AI'}</span>
+              <p>{message.text}</p>
+            </div>
+          ))}
+          {chatLoading && <div className="chat-message assistant"><span className="chat-message-role">ReadyStock AI</span><p className="chat-thinking">Thinking…</p></div>}
+        </div>
+        {askReady && (
           <div className="suggestions">
             {SUGGESTIONS.map((item) => (
               <button key={item} type="button" onClick={() => onAskSuggestion(item)}>
@@ -245,7 +328,7 @@ export function Hud({
         )}
         {reply?.trim() && <ReadAloud key={reply} text={reply} />}
         {error && <p className="error">{error}</p>}
-      </form>
+      </form>}
     </div>
   )
 }
@@ -279,7 +362,8 @@ function ObjectRow({
       >
         <span className="obj-type">{reconstructed ? object.type : 'unknown'}</span>
         <span className="obj-label">{reconstructed ? object.label : rawLabel(object)}</span>
-        {confidence !== null && <span className="obj-confidence">{confidence}%</span>}
+        {object.count != null ? <span className="obj-confidence">{object.count} in stock</span>
+          : confidence !== null && <span className="obj-confidence">{confidence}%</span>}
       </button>
     </li>
   )
@@ -344,5 +428,47 @@ function GlassButton({
     <button type="button" className={className} disabled={disabled} onClick={onClick} {...specular}>
       {children}
     </button>
+  )
+}
+
+function ShelfScanner({
+  onScan,
+  detections,
+  scanning,
+}: {
+  onScan: (file: File) => void
+  detections: ShelfDetection[]
+  scanning: boolean
+}) {
+  const [preview, setPreview] = useState<string | null>(null)
+  useEffect(() => () => { if (preview) URL.revokeObjectURL(preview) }, [preview])
+  function choose(file: File | undefined) {
+    if (!file) return
+    if (preview) URL.revokeObjectURL(preview)
+    setPreview(URL.createObjectURL(file))
+    onScan(file)
+  }
+  return (
+    <aside className="panel panel-scan glass">
+      <p className="panel-kicker">Computer vision</p>
+      <h2>Scan shelf</h2>
+      <label className="upload-button">
+        {scanning ? 'Scanning…' : 'Upload shelf image'}
+        <input type="file" accept="image/*" onChange={event => choose(event.target.files?.[0])} disabled={scanning} />
+      </label>
+      {preview && (
+        <div className="scan-preview">
+          <img src={preview} alt="Shelf scan preview" />
+          {detections.map((detection, index) => detection.box && (
+            <span key={`${detection.label}-${index}`} className="detection-box" style={{
+              left: `${detection.box.x * 100}%`, top: `${detection.box.y * 100}%`,
+              width: `${detection.box.width * 100}%`, height: `${detection.box.height * 100}%`,
+            }}>
+              {detection.label}{detection.count == null ? '' : ` · ${detection.count}`}
+            </span>
+          ))}
+        </div>
+      )}
+    </aside>
   )
 }
